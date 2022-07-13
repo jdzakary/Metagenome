@@ -1,8 +1,11 @@
 import time
 import multiprocessing as mp
+import numpy as np
 from functools import partial
 from typing import Callable, Any
 from tqdm import tqdm
+from typing import Union
+from subprocess import Popen, PIPE
 
 
 class JobMachine:
@@ -24,16 +27,14 @@ class JobMachine:
     def __init__(
         self,
         processes: int,
-        total_jobs: int,
         worker_func: Callable,
         args_list: list
     ) -> None:
         self.cpus = processes
         self.job_counter = self.JobCounter()
-        self.total_jobs = total_jobs
         self.worker_func = worker_func
         self.args_list = args_list
-        assert len(self.args_list) == self.total_jobs
+        self.total_jobs = len(self.args_list)
         self.pool = mp.Pool(
             processes=self.cpus,
             initializer=self.init_pool
@@ -49,11 +50,9 @@ class JobMachine:
             self.args_list
         )
         with tqdm(total=self.total_jobs) as bar:
-            old_value = self.job_counter.value
-            while old_value < self.total_jobs:
-                if self.job_counter.value != old_value:
-                    old_value = self.job_counter.value
-                    bar.update(1)
+            while bar.n < self.total_jobs:
+                bar.n = self.job_counter.value
+                bar.refresh()
         self.pool.close()
         self.pool.join()
         assert self.value == self.total_jobs
@@ -68,16 +67,27 @@ class JobMachine:
         return self.job_counter.value
 
 
-def hello(value):
+def simple_run(
+    command: Union[list[str], str]
+) -> str:
+    process = Popen(command, shell=True, stdout=PIPE)
+    output = list()
+    while True:
+        output.append(process.stdout.readline().strip())
+        if process.poll() is not None:
+            break
+    return '\n'.join([x.decode() for x in output])
+
+
+def my_worker(value):
     time.sleep(value)
 
 
 def main() -> None:
     machine = JobMachine(
         processes=5,
-        total_jobs=50,
-        worker_func=hello,
-        args_list=[1 for _ in range(50)]
+        worker_func=my_worker,
+        args_list=np.random.random(100)
     )
     machine.start()
 
