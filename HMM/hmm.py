@@ -141,13 +141,10 @@ def find_sequence(
 
 
 def main():
-    parse_database_multi(
-        model_file='models/model_3.hmm',
-        data_folder='/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2',
-        save_folder='/home/iwe22/zakaryjd/Python_Projects/Metagenome/HMM'
-                    '/search_output/database_2_model_3',
-        processes=10
-    )
+    pd.set_option('display.width', None)
+    pd.set_option('display.max_columns', None)
+    data = pd.read_csv('results/summary/database_2_model_3_filtered.csv')
+    print(data)
 
 
 if __name__ == '__main__':
