@@ -1,0 +1,61 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_1.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b22445.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_stockholm  [M=5697]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+    8.1e-07   21.2  20.2    1.4e-06   20.5  20.2    1.2  1  OceanDNA-b22445_00060  megahit:SRR6877521_N0002451
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b22445_00060  megahit:SRR6877521_N0002451
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   20.5  20.2   3.5e-09   1.4e-06    1019    1344 ..   17830   18137 ..   17723   18154 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 20.5 bits;  conditional E-value: 3.5e-09
+    alignment_stockholm  1019 ggtggtcctcgacggcgacacggtc...cggaccgcggcggacaccgtgccctccgcactgctcgcggccttgaccccgcagga 1099 
+                              ggtg tc t  a + cga+  ggtc     ga cg gg gg  a cgtg +   cg    g +cg g cc  ga c+cg  gg 
+  OceanDNA-b22445_00060 17830 GGTGATCGTTCAGATCGAGGTGGTCgctATGAACGAGGTGGCGATCGTGGTGATCGTGGAGGCCGAGACCGAGATCGCGGTGGT 17913
+                              444444444334444555555555411134677888888888888899988888898888899999****************** PP
+
+    alignment_stockholm  1100 catcgtccaagcgcaccaccgcatggccgaggccgcggaggcggtcggagaccgggaccgcgccgtgtggcatcgggcggcgat 1183 
+                              +atcg +  +g g+a+  c ++ tggccgaggccg gg+gg+gg +g ag c +ggac ++g++g   +g +   ggcggcg  
+  OceanDNA-b22445_00060 17914 GATCGAGATCGAGGAGAGCGTGGTGGCCGAGGCCGAGGCGGTGGAGGCAGCCGCGGACGCGGTGGAAACGGT---GGCGGCGGA 17994
+                              *****************99**************************************988777665544433...577777777 PP
+
+    alignment_stockholm  1184 cgccatggc...ccccgatccggctctcgtggcggacctggacga...catcgcggagcgcgcccgcgccgcggcggcccacgc 1261 
+                              +gcc+tggc    +c g  + ggc+ tcg ggc gac tgg+ ga   +atcg g            gc gcggcgg + a gc
+  OceanDNA-b22445_00060 17995 GGCCGTGGCggtAACAGTGGTGGCGGTCGAGGCAGACGTGGCGGAcgcAATCGAG------------GCGGCGGCGGTGGAGGC 18066
+                              8888887762223556666778888888888888887775544440004444333............34556667777778888 PP
+
+    alignment_stockholm  1262 cacggccgcagcggcgagtgaacgagcggcggccctgacctcggacacgaaggaacgcgcccgccgtctcgtggcggcggcca 1344 
+                              c+cgg+ gca cggcg         gcgg  +  ctgacc  gg++a +++gg +++cgc        tcgtggcgg    c+
+  OceanDNA-b22445_00060 18067 CGCGGTGGCAACGGCGG------TGGCGGATATTCTGACCGTGGCGATCGCGGTGATCGCGGT---GATCGTGGCGG---ACG 18137
+                              88898888888888873......3456788889999999999999999999999888775432...23556655553...333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (5697 nodes)
+Target sequences:                          402  (5834080 residues searched)
+Passed MSV filter:                        30  (0.0746269); expected 8.0 (0.02)
+Passed bias filter:                       27  (0.0671642); expected 8.0 (0.02)
+Passed Vit filter:                         7  (0.0174129); expected 0.4 (0.001)
+Passed Fwd filter:                         1  (0.00248756); expected 0.0 (1e-05)
+Initial search space (Z):                402  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 3.36u 0.01s 00:00:03.36 Elapsed: 00:00:01.18
+# Mc/sec: 28166.74
+//
+[ok]

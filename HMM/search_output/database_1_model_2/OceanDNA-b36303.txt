@@ -1,0 +1,88 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_2.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b36303.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_2  [M=789]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+    0.00025   16.4   0.0     0.0016   13.7   0.1    2.3  3  OceanDNA-b36303_00097  megahit:MP2914_N0009987
+    0.00042   15.6   0.0     0.0011   14.3   0.0    1.7  1  OceanDNA-b36303_00591  megahit:MP2914_N0032483
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b36303_00097  megahit:MP2914_N0009987
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.7   0.1     4e-06    0.0016     170     323 ..     899    1034 ..     853    1139 .. 0.66
+   2 ?   -2.6   0.0      0.34   1.4e+02     554     710 ..    1362    1523 ..    1267    1537 .. 0.57
+   3 ?   -3.0   0.0      0.44   1.8e+02      47      85 ..    1886    1924 ..    1868    1947 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 13.7 bits;  conditional E-value: 4e-06
+            alignment_2  170 tctcccccggctacaccggcactgaggcttccatcgcct..ggctgg.gcgagcgcatcgcctccca...cggcttcgtcgtcatc 249 
+                             tctc c   g ta a cg  a tga g tt c tcgcc   ggc g  gc   cgc tcg  t cca   cg  ttcg cgtcatc
+  OceanDNA-b36303_00097  899 TCTCTCAGCGGTAAATCGTAATTGATGGTTTCGTCGCCCtcGGCAGTcGCTTCCGCTTCGGTTTCCAgcgCGTGTTCGACGTCATC 984 
+                             44455555566889999999**************9997311333221134445666677777777662225666899********* PP
+
+            alignment_2  250 accatcgacaccatcaccacc...ctcgaccagccggacagccgggcagagcagctcaacgccgcgctgaaccacat 323 
+                             a c tcga a catc cca c   c   accagc                             gcgctgaa cacat
+  OceanDNA-b36303_00097  985 AACGTCGATATCATCGCCATCaccCAGTACCAGCA---------------------------AGCGCTGAATCACAT 1034
+                             ********999999877765400033334444332...........................245555555555555 PP
+
+  == domain 2  score: -2.6 bits;  conditional E-value: 0.34
+            alignment_2  554 acgcgaggccgttctacaacagcctgccgagctcgatcagcaaggcctacctggagctggacggcgcaacccacttcgccccgaac 639 
+                              cgc+agg cgtt     a ag c g  g   tc   cag  a      c tg  gctg    gcg aa  c ct cg  c ga c
+  OceanDNA-b36303_00097 1362 GCGCCAGGTCGTTGATATAAAGGCAGTTGTTTTCAGCCAGTGACTTGATCTTGAGGCTGTCGAGCGGAAAACTCTCCGGGCTGAGC 1447
+                             45556666666655444455555566666655555555555544444445555566666666678888888888888877777765 PP
+
+            alignment_2  640 atccccaacaagatcatcggcaagtacagcgtcgcctggctcaagcggttcgtcgacaa............cgacacccgcta 710 
+                              tc  caa    a catcggcaa       gtc cc ggctc  gc g t gt g caa            cgacacc gct 
+  OceanDNA-b36303_00097 1448 -TCAACAAATTTACCATCGGCAAA----CTGTC-CCAGGCTCT-GCAGATAGTGGGCAAaacagtgcttgcCGACACCGGCTT 1523
+                             .33333444445667888888763....23333.555666653.555555565555554333333333333455555555554 PP
+
+  == domain 3  score: -3.0 bits;  conditional E-value: 0.44
+            alignment_2   47 tcgaagccagcagcggccccttctccgtcagcgaggaga 85  
+                             tcgaa  c gca  ggcc cttc ccgt  gcg  ga a
+  OceanDNA-b36303_00097 1886 TCGAATTCGGCACGGGCCTCTTCACCGTTGGCGGCGATA 1924
+                             788999999999999999999999999998887665544 PP
+
+>> OceanDNA-b36303_00591  megahit:MP2914_N0032483
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.3   0.0   2.6e-06    0.0011     232     337 ..    1009    1116 ..     912    1189 .. 0.60
+
+  Alignments for each domain:
+  == domain 1  score: 14.3 bits;  conditional E-value: 2.6e-06
+            alignment_2  232 cacggcttcgtcgtcatcacca........tcgacaccatcaccaccctcgaccagccggacagccgggc.ag.agcagctcaacg 307 
+                               cgg t cg  g ca ca  a        t gac    t a cacc tcgaccagccgga a  cgggc ag  gcag t aa g
+  OceanDNA-b36303_00591 1009 AGCGGATCCGCTGGCAGCATGAgactcactTTGACC---TTATCACCATCGACCAGCCGGAGA--CGGGCcAGtGGCAGATTAATG 1089
+                             235666666666666666554411111111344444...44556777899*********9865..555541552579********* PP
+
+            alignment_2  308 ccgcgctgaaccacatgatcaaccgggcgt 337 
+                             c g  ctg acc    g  caaccggg g 
+  OceanDNA-b36303_00591 1090 CTGAACTGGACC---CGGACAACCGGGTGA 1116
+                             ****99999887...577899999999763 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (789 nodes)
+Target sequences:                          830  (1583152 residues searched)
+Passed MSV filter:                        96  (0.115663); expected 16.6 (0.02)
+Passed bias filter:                       36  (0.0433735); expected 16.6 (0.02)
+Passed Vit filter:                         4  (0.00481928); expected 0.8 (0.001)
+Passed Fwd filter:                         2  (0.00240964); expected 0.0 (1e-05)
+Initial search space (Z):                830  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.09u 0.01s 00:00:00.10 Elapsed: 00:00:00.07
+# Mc/sec: 17844.38
+//
+[ok]

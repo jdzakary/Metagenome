@@ -1,0 +1,72 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_1.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b15308.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_stockholm  [M=5697]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+  ------ inclusion threshold ------
+       0.04    4.2   5.8      0.057    3.6   5.8    1.1  1  OceanDNA-b15308_00060  megahit:SRS1791668_N0004432
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b15308_00060  megahit:SRS1791668_N0004432
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    3.6   5.8   0.00041     0.057     912    1338 ..    7182    7602 ..    7152    7654 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 3.6 bits;  conditional E-value: 0.00041
+    alignment_stockholm  912 gaggtggtggcgctcgccgggatatccgagggattggacgaacagctcacctgtcgggtgctgccccatcacaggtcgacgctggc 997 
+                             gaggtggt   g tcg cg g+       gg a tg  cg+++a            g         ca+c+ +g tcg++g tggc
+  OceanDNA-b15308_00060 7182 GAGGTGGTAATGATCGTCGAGGC------GGTAATGATCGTCGA------------G--------GCAGCTACGATCGTGG-TGGC 7240
+                             33333333333333333333322......222333333333333............2........2455555666777655.8999 PP
+
+    alignment_stockholm  998 cgaggccgtccgctcggggctggtggtcctcgacggcgacacggtccggaccgcggcggacaccgtgccctccgcactgc....tc 1079
+                             cgagg  gt++   c g ++ ggtggt  t  +cg cga+ cggt   ga cg  g gg     +tg++c ccg a+tg     tc
+  OceanDNA-b15308_00060 7241 CGAGGTGGTGGTGACCGTCGGGGTGGTAATGATCGTCGAGGCGGTAATGATCGTCGAGGCGGTAATGATCGCCGAAATGAgggtTC 7326
+                             99999998888777778888888999998888999999***********99998888888888899999***99999874221111 PP
+
+    alignment_stockholm 1080 g..............cggccttgaccccg...caggacatcgtccaagcgcaccaccgcatggccgaggccgc...ggaggcggtc 1145
+                                            cg + ttga    g   ca gac t g +  agcg + c + ++atgg c a g cgc   g  gg+g t 
+  OceanDNA-b15308_00060 7327 CagacgtagggataaCGATTTTGATGAAGgtcCAAGACGTAGGGACAGCGATTCTGATGATGGTCCACGACGCcaaGATGGTGATT 7412
+                             11111122222222244445554433222111555566666666777888888888899999987666665551114445555555 PP
+
+    alignment_stockholm 1146 ggagaccgggaccgcgccgtgtggcatcgggcggcgatcgccatggcccccgatccggct....ctcgtggcgga........cct 1219
+                              +  + +ggg cc cg cgt +gg      gcg    t+   atgg cc cga++ gg +    +tcg g  g+a        c t
+  OceanDNA-b15308_00060 7413 TTGATGAGGGTCCACGGCGTAGGGACA---GCGATTTTGATGATGGTCCACGACGAGGTGgtttTTCGAGAAGTAgtatggatCGT 7495
+                             555566777777777777776554332...33333344444589999999999998886511114455555444311111111234 PP
+
+    alignment_stockholm 1220 ggacgacatcgcggagcgcgcccgc.gccgcggcggcccacgccacggccgcagcggcgagtgaacgagcggcggccctgacctcg 1304
+                             gga g++a+cgcgg       c+g+  ccg gg ggc  +cgc +cgg+ gc g gg g            g+ +cc tg c    
+  OceanDNA-b15308_00060 7496 GGAGGTAACCGCGG-------CGGTaACCGTGGTGGCAATCGCGGCGGTAGCCGTGGTG------------GTAACCGTGGCAGTA 7562
+                             66666666666653.......33331578888888999999988888877766655544............333333333333333 PP
+
+    alignment_stockholm 1305 gacacgaaggaacgcg......cccgccgtctcgtggcgg 1338
+                             g +a g+ gga+cg g      c  + cg  tcgtggcgg
+  OceanDNA-b15308_00060 7563 GTGATGGTGGAGCGAGtcgtggCGGAGCGAGTCGTGGCGG 7602
+                             3333333333333222000000222223334444444443 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (5697 nodes)
+Target sequences:                          138  (1518885 residues searched)
+Passed MSV filter:                         6  (0.0434783); expected 2.8 (0.02)
+Passed bias filter:                        6  (0.0434783); expected 2.8 (0.02)
+Passed Vit filter:                         2  (0.0144928); expected 0.1 (0.001)
+Passed Fwd filter:                         1  (0.00724638); expected 0.0 (1e-05)
+Initial search space (Z):                138  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.62u 0.01s 00:00:00.63 Elapsed: 00:00:00.34
+# Mc/sec: 25450.26
+//
+[ok]

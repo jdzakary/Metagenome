@@ -1,0 +1,51 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_2.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b26127.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_2  [M=789]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+     0.0013   13.5   0.1     0.0035   12.1   0.1    1.6  1  OceanDNA-b26127_00183  megahit:SRR6877520_N0078390
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b26127_00183  megahit:SRR6877520_N0078390
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.1   0.1   6.1e-06    0.0035     199     311 ..    1082    1206 ..    1064    1256 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 12.1 bits;  conditional E-value: 6.1e-06
+            alignment_2  199 tccatcgcctggctgggcgagcgcatcgcctcccacggcttcgtcgtcat....caccatcgacaccatcaccaccctcgaccagc 280 
+                             tc   cgcc  gctgggcga    a cgcc   c cggctt g cgtcat    ca  at g  a   tcacca c tc a cagc
+  OceanDNA-b26127_00183 1082 TCTGGCGCCAAGCTGGGCGATTTTACCGCCCGTCTCGGCTTTGGCGTCATagcgCAGAATTG-TATTCTCACCATCTTCAATCAGC 1166
+                             4556689999***************************************9332233344544.46667899999999999999999 PP
+
+            alignment_2  281 cggacagccg..........ggcagagcagctcaacgccgc 311 
+                                aca ccg          ggca agc    caacgccgc
+  OceanDNA-b26127_00183 1167 TCAACATCCGcaccgcccttGGCAAAGCC-TGCAACGCCGC 1206
+                             88888887763333333344666666664.34677777775 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (789 nodes)
+Target sequences:                          570  (2488470 residues searched)
+Passed MSV filter:                        80  (0.140351); expected 11.4 (0.02)
+Passed bias filter:                       19  (0.0333333); expected 11.4 (0.02)
+Passed Vit filter:                         5  (0.00877193); expected 0.6 (0.001)
+Passed Fwd filter:                         1  (0.00175439); expected 0.0 (1e-05)
+Initial search space (Z):                570  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.13u 0.01s 00:00:00.14 Elapsed: 00:00:00.08
+# Mc/sec: 24542.54
+//
+[ok]

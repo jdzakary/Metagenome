@@ -1,0 +1,71 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_2.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b38650.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_2  [M=789]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+      3e-19   61.5   0.0    5.3e-19   60.7   0.0    1.2  1  OceanDNA-b38650_00005  megahit:ERS1309476_N0000054
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b38650_00005  megahit:ERS1309476_N0000054
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   60.7   0.0   1.1e-20   5.3e-19     103     559 ..   25095   25551 ..   25052   25712 .. 0.82
+
+  Alignments for each domain:
+  == domain 1  score: 60.7 bits;  conditional E-value: 1.1e-20
+            alignment_2   103 gccagcggcttcggcggcggcaccatctactacccgcgggagaacaacacctacggt.........gcggtggcgatctccccc 177  
+                              gcca  gg tt gg ggcgg accat  a ta cc   gga       a ct  ggt         g   t gcg t    cc 
+  OceanDNA-b38650_00005 25095 GCCAATGGTTTTGGTGGCGGTACCATACATTATCCAACGGATGCTGGTAGCTGTGGTctgctaggtGGTATCGCGGTAGTGCCA 25178
+                              688999****************************99989888877778888877766221111100223344677777778999 PP
+
+            alignment_2   178 ggctacaccggcactgaggcttccatcgcctggctgggcgagcgcatcgcctcccacggcttcgtcgtcatcaccatcgacacc 261  
+                              gg tac        tgag cttc atc   tgg  ggg   gcg  t gcctc    gg tt gtcgt atcac at  a ac 
+  OceanDNA-b38650_00005 25179 GGTTACGTGTCTTATGAGTCTTCTATCAAATGGTGGGGACCGCGTCTAGCCTCTTGGGGATTTGTCGTTATCACTATTAATACT 25262
+                              999999988888899***********************999******************************************* PP
+
+            alignment_2   262 atcaccaccctcgaccagccggacagccgggcagagcagctcaacgccgcgctgaaccacatgatcaaccgggcgtcctccacg 345  
+                              a c cca     ga  a ccgga agccg gc ga ca  t a cgc gc ct  a cac t  tc               ac 
+  OceanDNA-b38650_00005 25263 AGCTCCATTTATGATAATCCGGATAGCCGTGCTGAACAATTGAGCGCGGCTCTCGATCACCTTGTCGC------TGATGAAACA 25340
+                              *************************************************9999888888776555421......1112234555 PP
+
+            alignment_2   346 gtgcgcagccggatcgacagcagccgactggcggtcatgggccactccatgggcggcggcggcagcctgcgtctggcctcccag 429  
+                              gtg g      gat ga    a  cg  tgg  g  at ggc   tc atgggcggcggcgg  + ct cg  tggc  c  ag
+  OceanDNA-b38650_00005 25341 GTGGGGCATATGATAGATCCAAATCGTTTGGGCGCGATTGGCTGGTCAATGGGCGGCGGCGGTGCGCTACGATTGGCAACTGAG 25424
+                              6655555556678888888888899999*999999************************************************* PP
+
+            alignment_2   430 cgtcccgacctgaaggccgccatcccgctcaccccgtggcacctcaacaagaactggagcagtgtgagggtgccgacgctgatc 513  
+                              cg        tg a gc    at  c c  ac cc t  cac    ac ag   tgg gc  tg       gcc  c ct  tc
+  OceanDNA-b38650_00005 25425 CGCAGTACGGTGCAAGCAATAATTGCACAAACACCCTATCACGA-TACGAGCTATGGCGCGATG--GATACGCCTGCTCTATTC 25505
+                              99776666678889999999999999998888888877666543.2344454555665555444..4445578999999***** PP
+
+            alignment_2   514 atcggggctgacctggacacaatcgcgccggtcgtcacgcacgcga 559  
+                              atcg +  tga    gac   atcgc ccg      a   a  c+a
+  OceanDNA-b38650_00005 25506 ATCGCTTGTGAAAATGACCGTATCGCCCCGAATAAAAAATATACCA 25551
+                              *****9999**9999***99*****999987666555555555544 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (789 nodes)
+Target sequences:                           47  (3117179 residues searched)
+Passed MSV filter:                         2  (0.0425532); expected 0.9 (0.02)
+Passed bias filter:                        2  (0.0425532); expected 0.9 (0.02)
+Passed Vit filter:                         2  (0.0425532); expected 0.0 (0.001)
+Passed Fwd filter:                         1  (0.0212766); expected 0.0 (1e-05)
+Initial search space (Z):                 47  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.66u 0.01s 00:00:00.67 Elapsed: 00:00:00.52
+# Mc/sec: 4729.72
+//
+[ok]

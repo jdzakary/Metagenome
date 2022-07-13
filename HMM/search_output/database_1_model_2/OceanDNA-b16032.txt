@@ -1,0 +1,65 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_2.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b16032.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_2  [M=789]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+     0.0045   12.2  12.8      0.037    9.2   0.6    3.5  3  OceanDNA-b16032_00083  megahit:SRR6869052_N0018586
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b16032_00083  megahit:SRR6869052_N0018586
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.2   0.6   4.5e-05     0.037     168     271 ..    1891    2009 ..    1878    2028 .. 0.76
+   2 !    8.2   1.0   9.2e-05     0.076     222     270 ..    2050    2098 ..    2007    2119 .. 0.63
+   3 ?    0.4   0.4     0.022        18     241     275 ..    2180    2214 ..    2150    2268 .. 0.54
+
+  Alignments for each domain:
+  == domain 1  score: 9.2 bits;  conditional E-value: 4.5e-05
+            alignment_2  168 gatctcccccggctacaccggcactgaggcttccatcgcc...............tggctgggcgagcgcatcgcctcccacggct 238 
+                             gatc cc   g c a a cg cactg   ct  catcgcc               tg  t gg g    catcgc  cc  c gc 
+  OceanDNA-b16032_00083 1891 GATCGCCATTGTCCAGATCGCCACTGTCACTGTCATCGCCatcatcacccccatcTGAGTCGGAGTCTCCATCGCTACCATCAGCG 1976
+                             5666777777778888888888888888888888888764222222222222222677777888888899**************** PP
+
+            alignment_2  239 tcgtcgtcatcaccatcgacaccatcaccaccc 271 
+                             tcgtcgtcatca ca c    ccatca cacc 
+  OceanDNA-b16032_00083 1977 TCGTCGTCATCATCAGCACTGCCATCATCACCG 2009
+                             ********9999999998888888888888764 PP
+
+  == domain 2  score: 8.2 bits;  conditional E-value: 9.2e-05
+            alignment_2  222 catcgcctcccacggcttcgtcgtcatcaccatcgacaccatcaccacc 270 
+                             ca cgcc cc  c gc tcgtc tcatca ca cg ca catcacca c
+  OceanDNA-b16032_00083 2050 CACCGCCCCCATCAGCGTCGTCATCATCATCACCGTCATCATCACCATC 2098
+                             3456667777777888888888888888888888888888887777654 PP
+
+  == domain 3  score: 0.4 bits;  conditional E-value: 0.022
+            alignment_2  241 gtcgtcatcaccatcgacaccatcaccaccctcga 275 
+                             g c tca caccatcg    catcacca   tcg 
+  OceanDNA-b16032_00083 2180 GCCATCACCACCATCGGTGTCATCACCATTATCGC 2214
+                             33444444444444444444444444333333322 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (789 nodes)
+Target sequences:                          822  (2734845 residues searched)
+Passed MSV filter:                       127  (0.154501); expected 16.4 (0.02)
+Passed bias filter:                        8  (0.00973236); expected 16.4 (0.02)
+Passed Vit filter:                         2  (0.00243309); expected 0.8 (0.001)
+Passed Fwd filter:                         1  (0.00121655); expected 0.0 (1e-05)
+Initial search space (Z):                822  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.11u 0.01s 00:00:00.12 Elapsed: 00:00:00.06
+# Mc/sec: 35963.21
+//
+[ok]

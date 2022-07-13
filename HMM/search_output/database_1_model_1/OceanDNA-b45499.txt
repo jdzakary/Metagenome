@@ -1,0 +1,61 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_1.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b45499.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_stockholm  [M=5697]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+     0.0049    9.5   0.1     0.0072    8.9   0.1    1.1  1  OceanDNA-b45499_00106  megahit:ERS1309599_N0012733
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b45499_00106  megahit:ERS1309599_N0012733
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.9   0.1   1.1e-05    0.0072     173     470 ..     830    1074 ..     767    1240 .. 0.64
+
+  Alignments for each domain:
+  == domain 1  score: 8.9 bits;  conditional E-value: 1.1e-05
+    alignment_stockholm  173 caccggaatggttgtcgtgggggccccggggacgggcaagaccaccctgctcaacgcgctcgtcgaacacgccgaagggttccaag 258 
+                             ca  gga tg t  t gt gg  c ccggg ac gg aagacc   ctg   aa gcg t g cg   a gc ga g g       
+  OceanDNA-b45499_00106  830 CAAGGGAGTGCTAATGGTTGGTCCTCCGGGAACTGGAAAGACCTTGCTGGCGAAGGCGGTGGCCGGTGAGGCGGAGGTGCCTTTT- 914 
+                             44557888888999999999999*************************************9999999888888876655322111. PP
+
+    alignment_stockholm  259 tcctgtgggccgagggcagcgcggccgagtccgatgtccgtttcgccggtgtcgagcagttgttgagaccgctcgagtccttggtg 344 
+                             t         c     cagcg   c ga t cg tg     ttcg  g            tgttg   ccgctcg gt c tg   
+  OceanDNA-b45499_00106  915 T--------TCAGTATCAGCGGATCTGATTTCGTTGAAATGTTCGTAG-----------GTGTTGGCGCCGCTCGTGTTCGTGACA 981 
+                             1........112223467788888888888888888777777776655...........56678888999****999988776433 PP
+
+    alignment_stockholm  345 tcactcctgccggatgaccgtggccgc......gcattgcgaccggtatggggactgcccgccgacgatgagggacaggtcggttc 424 
+                             t          g  tga c  ggccg       gc   g g c   tat                cgatga               
+  OceanDNA-b45499_00106  982 T----------GTTTGAACAGGGCCGAaagaatGCTCCGTGTCTTATAT------------TTATCGATGA--------------- 1030
+                             2..........22334444444444321000001111111111111111............1112233332............... PP
+
+    alignment_stockholm  425 actcgcggtaccggcggccgtctccgcgctgctcggcctggccgct 470 
+                             a    cg t ccg cggccgtc  cgcg  gct g    ggc gc 
+  OceanDNA-b45499_00106 1031 A--ATCGATGCCGTCGGCCGTCAACGCGGAGCTGGAATGGGCGGCG 1074
+                             2..2356788999999******999999999998777766665553 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (5697 nodes)
+Target sequences:                          689  (2513151 residues searched)
+Passed MSV filter:                       137  (0.198839); expected 13.8 (0.02)
+Passed bias filter:                       58  (0.08418); expected 13.8 (0.02)
+Passed Vit filter:                        12  (0.0174165); expected 0.7 (0.001)
+Passed Fwd filter:                         1  (0.00145138); expected 0.0 (1e-05)
+Initial search space (Z):                689  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 1.50u 0.00s 00:00:01.50 Elapsed: 00:00:00.81
+# Mc/sec: 17675.83
+//
+[ok]

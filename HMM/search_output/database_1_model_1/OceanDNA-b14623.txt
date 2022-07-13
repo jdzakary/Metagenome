@@ -1,0 +1,51 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_1.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b14623.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_stockholm  [M=5697]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+     0.0046    9.3   0.0     0.0075    8.6   0.0    1.2  1  OceanDNA-b14623_00339  megahit:SRS1528796_N0018631
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b14623_00339  megahit:SRS1528796_N0018631
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.6   0.0   1.4e-05    0.0075    3511    3597 ..    2082    2170 ..    2073    2181 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 8.6 bits;  conditional E-value: 1.4e-05
+    alignment_stockholm 3511 gagccgactggcggtcatgggccactcgatgggcggcggcggcaccctgcgtctggcctcgcagcgtc...ccgagctgaaggcgg 3593
+                             ga+ccgac     gtc  ggg cactcgatggg ggcggc  +acc t +   tggc    +a c +c   c  a+ctgaaggc g
+  OceanDNA-b14623_00339 2082 GAACCGACCAT-CGTCTGGGGGCACTCGATGGGTGGCGGCAATACCGTCGCCATGGCGAATAATCCGCcatCGAACCTGAAGGCTG 2166
+                             56677776544.479999******************************9999999997766655444411156789*******998 PP
+
+    alignment_stockholm 3594 ccat 3597
+                              c t
+  OceanDNA-b14623_00339 2167 TCGT 2170
+                             7766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (5697 nodes)
+Target sequences:                          551  (2294955 residues searched)
+Passed MSV filter:                        82  (0.14882); expected 11.0 (0.02)
+Passed bias filter:                       59  (0.107078); expected 11.0 (0.02)
+Passed Vit filter:                        13  (0.0235935); expected 0.6 (0.001)
+Passed Fwd filter:                         1  (0.00181488); expected 0.0 (1e-05)
+Initial search space (Z):                551  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 1.47u 0.01s 00:00:01.48 Elapsed: 00:00:00.81
+# Mc/sec: 16141.18
+//
+[ok]

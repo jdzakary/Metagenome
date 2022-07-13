@@ -1,0 +1,70 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_2.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b13498.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_2  [M=789]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+    0.00051   14.5   1.3      0.042    8.2   0.0    2.9  3  OceanDNA-b13498_00385  megahit:ERS2026554_N0052403
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b13498_00385  megahit:ERS2026554_N0052403
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    8.2   0.0   9.3e-05     0.042     638     712 ..     246     320 ..     219     361 .. 0.80
+   2 !    1.9   0.3    0.0071       3.3     348     478 ..    1408    1547 ..    1397    1585 .. 0.65
+   3 ?   -0.6   0.0     0.041        19     289     402 ..    1665    1785 ..    1607    1799 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 8.2 bits;  conditional E-value: 9.3e-05
+            alignment_2 638 acatccccaacaagatcatcggcaagtacagcgtcgcctggctcaagcggttcgtcgacaacgacacccgctaca 712
+                              at  ccaac    tc  cggcaag acagcgtcg  t g tc agcgg t  t g   a ga  ccc    ca
+  OceanDNA-b13498_00385 246 GGATGACCAACCCAGTCGCCGGCAAGCACAGCGTCGGTTTGTTCCAGCGGATACTTGCTCATGATGCCCATCCCA 320
+                            556667788888888999********************************9999999988999888877554443 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.0071
+            alignment_2  348 gcgcagccggatcgacagcagccgactggcggtcatgggccactccatgggcg...gcggcggcagcctgc..g.tctggcctccc 427 
+                             g  cagc ggatc  ca    c g  tg cggtcatg  cca   cat ggcg   gc gc gcagcctg   g t   gc   cc
+  OceanDNA-b13498_00385 1408 GGCCAGCGGGATCATCACTTCCGGCATGACGGTCATG--CCA--TCATTGGCGacaGCCGCTGCAGCCTGGaaGaTTGCGCGCACC 1489
+                             45589999999999999888888888999******97..444..578888887222445566778888764222122223334455 PP
+
+            alignment_2  428 agcgtcc...cgacctgaaggccgccatcccgctca......ccccgtggcacctcaaca 478 
+                              gc tc    cga ct a ggc g catc cgctca      c ccg g  a c ca ca
+  OceanDNA-b13498_00385 1490 TGCATCTcaaCGATCTCAGGGC-G-CATCACGCTCAaacgcaCACCGCGCAATCCCATCA 1547
+                             5565554111566777776665.3.68888888864221111556666666666666555 PP
+
+  == domain 3  score: -0.6 bits;  conditional E-value: 0.041
+            alignment_2  289 cgggcagagcagctcaacgccg........cgctgaaccacatgatcaaccgggcgtcctccacggtgcgcagccgg..atcgaca 364 
+                             c ggcaga  a ctca  gc g        cg t aa c  atgatca c g   g c tcca  g gcg a c  g   tcga a
+  OceanDNA-b13498_00385 1665 CAGGCAGA--AACTCA-TGCAGtggtgggtCGATCAAGCGAATGATCACCGGATAGCCGTCCATTGCGCGGAACAAGccGTCGAAA 1747
+                             34555554..344443.2333311111111445567888899*****999888899999999999999887644433113899999 PP
+
+            alignment_2  365 gcagccgactggc.ggtcatgggccactccatgggcggc 402 
+                              cagcc   tgg  gg ca   gc   tcca g gcggc
+  OceanDNA-b13498_00385 1748 TCAGCCTGTTGGAaGGGCAGTAGCTCATCCA-GTGCGGC 1785
+                             9999998777764244444444444444444.4445554 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (789 nodes)
+Target sequences:                          458  (1605322 residues searched)
+Passed MSV filter:                        58  (0.126638); expected 9.2 (0.02)
+Passed bias filter:                       25  (0.0545852); expected 9.2 (0.02)
+Passed Vit filter:                         4  (0.00873362); expected 0.5 (0.001)
+Passed Fwd filter:                         1  (0.00218341); expected 0.0 (1e-05)
+Initial search space (Z):                458  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.09u 0.00s 00:00:00.09 Elapsed: 00:00:00.07
+# Mc/sec: 18094.27
+//
+[ok]

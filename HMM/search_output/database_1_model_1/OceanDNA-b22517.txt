@@ -1,0 +1,46 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_1.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b22517.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_stockholm  [M=5697]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+    0.00083   12.7   0.0     0.0012   12.1   0.0    1.1  1  OceanDNA-b22517_00774  megahit:SRR6854590_N0005806
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b22517_00774  megahit:SRR6854590_N0005806
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.1   0.0   1.1e-06    0.0012    3527    3582 ..    2773    2828 ..    2752    2839 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 12.1 bits;  conditional E-value: 1.1e-06
+    alignment_stockholm 3527 atgggccactcgatgggcggcggcggcaccctgcgtctggcctcgcagcgtcccga 3582
+                             atgggcca tcgatgggcggcggcgg ac   gc+  t g c +++ag   cc ga
+  OceanDNA-b22517_00774 2773 ATGGGCCATTCGATGGGCGGCGGCGGGACTTGGCACATCGGCATCAAGTACCCGGA 2828
+                             89**************************9988888888888888888877777665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (5697 nodes)
+Target sequences:                         1094  (7647679 residues searched)
+Passed MSV filter:                       166  (0.151737); expected 21.9 (0.02)
+Passed bias filter:                       56  (0.0511883); expected 21.9 (0.02)
+Passed Vit filter:                        10  (0.00914077); expected 1.1 (0.001)
+Passed Fwd filter:                         1  (0.000914077); expected 0.0 (1e-05)
+Initial search space (Z):               1094  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 2.29u 0.01s 00:00:02.29 Elapsed: 00:00:00.63
+# Mc/sec: 69156.87
+//
+[ok]

@@ -1,0 +1,46 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_2.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b25020.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_2  [M=789]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+    0.00041   14.6   0.0    0.00063   14.0   0.0    1.2  1  OceanDNA-b25020_00334  megahit:ERS492647_N0054877
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b25020_00334  megahit:ERS492647_N0054877
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   14.0   0.0   1.6e-06   0.00063     341     422 ..    1184    1262 ..     977    1349 .. 0.71
+
+  Alignments for each domain:
+  == domain 1  score: 14.0 bits;  conditional E-value: 1.6e-06
+            alignment_2  341 ccacggtgcgc..agccggatcgacagcagccgactggcggtcatgggccactccatgggcggcggcggcagcctgcgtctggc 422 
+                              ca ggt cgc   gcc g t  aca c  c  ac ggcg tcat ggcca tccatgggcggc   g cagcctg    tg c
+  OceanDNA-b25020_00334 1184 GCATGGTACGCgaTGCCAGCTTTACAAC--CAAACCGGCGATCATTGGCCATTCCATGGGCGGCATGGTCAGCCTGA---TGAC 1262
+                             3566666544411678888888887754..67899******************************99*****99984...3333 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (789 nodes)
+Target sequences:                          399  (1410987 residues searched)
+Passed MSV filter:                        51  (0.12782); expected 8.0 (0.02)
+Passed bias filter:                        6  (0.0150376); expected 8.0 (0.02)
+Passed Vit filter:                         1  (0.00250627); expected 0.4 (0.001)
+Passed Fwd filter:                         1  (0.00250627); expected 0.0 (1e-05)
+Initial search space (Z):                399  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.05u 0.01s 00:00:00.06 Elapsed: 00:00:00.03
+# Mc/sec: 37108.96
+//
+[ok]

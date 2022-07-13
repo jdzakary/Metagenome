@@ -1,0 +1,67 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_2.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-a4235.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_2  [M=789]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence             Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------             -----------
+     0.0076   10.3   0.1        1.1    3.1   0.0    3.5  4  OceanDNA-a4235_00217  megahit:ERS489585_N0060896
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-a4235_00217  megahit:ERS489585_N0060896
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.4   0.0       0.3   1.1e+02     250     273 ..     570     593 ..     520     619 .. 0.58
+   2 !    1.9   0.0    0.0074       2.7     627     695 ..    1172    1240 ..    1064    1294 .. 0.79
+   3 ?   -1.2   0.0     0.062        23     247     275 ..    1416    1444 ..    1396    1468 .. 0.73
+   4 !    3.1   0.0    0.0031       1.1     214     279 ..    2020    2081 ..    1989    2101 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: -3.4 bits;  conditional E-value: 0.3
+           alignment_2 250 accatcgacaccatcaccaccctc 273
+                           a c t  ac ccatcacca c tc
+  OceanDNA-a4235_00217 570 ATCGTTAACTCCATCACCATCGTC 593
+                           223333334444444444433332 PP
+
+  == domain 2  score: 1.9 bits;  conditional E-value: 0.0074
+           alignment_2  627 cttcgccccgaacatccccaacaagatcatcggcaagtacagcgtcgcctggctcaagcggttcgtcga 695 
+                            c tcgcc   a catc  ca c agat atc    a t ca cg cg ctg  tc ag ggt  gtc  
+  OceanDNA-a4235_00217 1172 CATCGCCGTCATCATCTTCATCCAGATAATCACAGACTCCATCGCCGTCTGTATCTAGAGGTGTGTCAG 1240
+                            3578888888999*****************99999999**********************999998754 PP
+
+  == domain 3  score: -1.2 bits;  conditional E-value: 0.062
+           alignment_2  247 atcaccatcgacaccatcaccaccctcga 275 
+                            atca catc acacc tcacca c tcg 
+  OceanDNA-a4235_00217 1416 ATCATCATCAACACCGTCACCATCGTCGT 1444
+                            56667777777777777777777666654 PP
+
+  == domain 4  score: 3.1 bits;  conditional E-value: 0.0031
+           alignment_2  214 ggcgagcgcatcgcctcccacggcttcgtcgtcatcaccatcgacaccatcaccaccctcgaccag 279 
+                            g cga   catcg ct c  c g  t gtc  c  ca catcgaca catca cac    gacca 
+  OceanDNA-a4235_00217 2020 GTCGAAATCATCGACTACATCTGTGTAGTCTGCTCCATCATCGACATCATCATCAC----GACCAC 2081
+                            5567777899999999999999999999999999999***********99998875....555543 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (789 nodes)
+Target sequences:                          366  (1377555 residues searched)
+Passed MSV filter:                        13  (0.0355191); expected 7.3 (0.02)
+Passed bias filter:                       13  (0.0355191); expected 7.3 (0.02)
+Passed Vit filter:                         2  (0.00546448); expected 0.4 (0.001)
+Passed Fwd filter:                         1  (0.00273224); expected 0.0 (1e-05)
+Initial search space (Z):                366  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.06u 0.01s 00:00:00.06 Elapsed: 00:00:00.04
+# Mc/sec: 27172.27
+//
+[ok]

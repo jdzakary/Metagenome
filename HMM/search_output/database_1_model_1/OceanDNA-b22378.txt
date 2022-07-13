@@ -1,0 +1,52 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_1.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b22378.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_stockholm  [M=5697]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+  ------ inclusion threshold ------
+        1.5    2.3  12.5        2.1    1.8  12.5    1.1  1  OceanDNA-b22378_01337  megahit:SRS2350585_N0189249
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b22378_01337  megahit:SRS2350585_N0189249
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.8  12.5    0.0015       2.1    4579    4697 ..      23     153 ..       3     184 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 1.8 bits;  conditional E-value: 0.0015
+    alignment_stockholm 4579 ctctcccgcgcactgcgcctcgccgccgcggccgccacggcggtcgttaccgcggtgggtctggccgccccagctcgtgtggccaa 4664
+                              +c cc +cgc  tg+ c  cgcc ccgc  ccgcc  +gc+ t gttaccgc g++g + tg+ccgcc c+gc  ++g++ cc +
+  OceanDNA-b22378_01337   23 GCCGCCGCCGCCTTGACCACCGCCACCGCCACCGCCGAAGCCTTGGTTACCGCCGCCGCCTTGACCGCCACCGCCAAAGCCACCGC 108 
+                             34555667788888888999999999999999*************************************************99999 PP
+
+    alignment_stockholm 4665 cccct..acgagcgc..........ggccccaacccgaccgacgc 4697
+                             c+cct  ac+a+cgc            c+cca+c+c acc ac+c
+  OceanDNA-b22378_01337  109 CGCCTtgACCACCGCcaccaagaccACCGCCACCACCACCAACTC 153 
+                             998886667777664111111111122345566666666666655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (5697 nodes)
+Target sequences:                         1461  (5860178 residues searched)
+Passed MSV filter:                       104  (0.0711841); expected 29.2 (0.02)
+Passed bias filter:                       97  (0.0663929); expected 29.2 (0.02)
+Passed Vit filter:                        18  (0.0123203); expected 1.5 (0.001)
+Passed Fwd filter:                         1  (0.000684463); expected 0.0 (1e-05)
+Initial search space (Z):               1461  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 2.92u 0.01s 00:00:02.93 Elapsed: 00:00:01.02
+# Mc/sec: 32730.82
+//
+[ok]

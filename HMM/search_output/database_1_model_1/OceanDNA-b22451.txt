@@ -1,0 +1,63 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_1.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1/OceanDNA-b22451.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_stockholm  [M=5697]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence              Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------              -----------
+     0.0065   10.1   0.9      0.067    6.7   0.1    2.0  2  OceanDNA-b22451_01110  megahit:ERS493390_N0285461
+
+
+Domain annotation for each sequence (and alignments):
+>> OceanDNA-b22451_01110  megahit:ERS493390_N0285461
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    6.7   0.1   4.8e-05     0.067    4805    4942 ..     223     351 ..     196     416 .. 0.81
+   2 !    1.4   0.1    0.0019       2.6    4854    4956 ..     593     706 ..     439     731 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 6.7 bits;  conditional E-value: 4.8e-05
+    alignment_stockholm 4805 acacctacggtgctgtggcgatctcccccggctacaccggcacccaggcctctgtcgcctggttgggcgagcggatggcctcccac 4890
+                             +caccta gg    +tgg +atc      g ct c ccg ca c agg c  +gtcgcctg tt g+c  gc ga+g+ ct    c
+  OceanDNA-b22451_01110  223 CCACCTATGG---CTTGGTCATC------GTCTGCTCCGCCAACTAGGACGTCGTCGCCTGCTTCGCCTTGCAGAAGATCTAATCC 299 
+                             4677777776...7899999999......99999**********************************************999999 PP
+
+    alignment_stockholm 4891 ggcttcgtggtgatggccatcgacaccaacaccaccctggaccagccggaca 4942
+                             gg   cg +gt+a gg +atcgac cc++ accacc  +ga  a+ + g+ca
+  OceanDNA-b22451_01110  300 GGTACCGCCGTCAAGGTAATCGACCCCGGTACCACCAACGATAACGTCGTCA 351 
+                             9999999****************99999999999987777766666666665 PP
+
+  == domain 2  score: 1.4 bits;  conditional E-value: 0.0019
+    alignment_stockholm 4854 ctctgtcgcctggtt....g..ggcgagcggatggcctcccacggcttcgtggtgatggccatcgacacc............aaca 4921
+                             ctc++tcgcct  tt    g  g c a c++at+gcc cc+a ggc   gt gt+at+gccatc + acc            + ca
+  OceanDNA-b22451_01110  593 CTCCATCGCCTCCTTtaatGatGTCTATCCCATCGCCGCCAAAGGC---GTTGTCATCGCCATCATTACCttcaatgtagtcGTCA 675 
+                             45555555554333211111226788999**************995...889999******9999998862222222222225677 PP
+
+    alignment_stockholm 4922 ccaccctggaccagccggacagccgggcccgccag 4956
+                             cca cctg+ c+a   g++c  c g     gcc+g
+  OceanDNA-b22451_01110  676 CCATCCTGCCCGAAGAGATCGTCAG----AGCCGG 706 
+                             8888898888877666655544333....344444 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (5697 nodes)
+Target sequences:                         1382  (2957741 residues searched)
+Passed MSV filter:                        67  (0.0484805); expected 27.6 (0.02)
+Passed bias filter:                       64  (0.0463097); expected 27.6 (0.02)
+Passed Vit filter:                        15  (0.0108538); expected 1.4 (0.001)
+Passed Fwd filter:                         1  (0.000723589); expected 0.0 (1e-05)
+Initial search space (Z):               1382  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 1.04u 0.01s 00:00:01.05 Elapsed: 00:00:00.41
+# Mc/sec: 41098.17
+//
+[ok]
