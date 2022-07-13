@@ -1,0 +1,71 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_3.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b22616.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_3  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+      5e-15   53.4   0.1    3.9e-10   37.3   0.0    2.2  2  Sequence_3382  
+    0.00087   16.5   0.0     0.0011   16.1   0.0    1.3  1  Sequence_1116  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_3382  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   37.3   0.0   1.7e-13   3.9e-10     153     247 ..     144     240 ..     135     244 .. 0.78
+   2 !   13.7   0.0   2.7e-06    0.0059     138     188 ..     368     417 ..     349     454 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 37.3 bits;  conditional E-value: 1.7e-13
+    alignment_3 153 ridssrlavmGhsmGGGGtlrlasqrpdlkaai.pltpw...hlnknwssvrvptliiGadldtiapvlthakpfynslpssiskayleldgashf 244
+                     ids r+  mGhsmGGGGt  la + pd+ aa+ pl+p          ++ r+p++++  d d++   ++      ++l   +++ y+e+ g  h 
+  Sequence_3382 144 NIDSRRIYLMGHSMGGGGTWHLAMKYPDIWAALaPLAPAgprSRRDLVKARRIPVIVVQGDRDSLVYATRRWVERMKAL--KMEHRYIEVAGGDHV 237
+                    59***************************99966888762114445567789***********9876655444444444..578889999988888 PP
+
+    alignment_3 245 apn 247
+                     p 
+  Sequence_3382 238 RPA 240
+                    876 PP
+
+  == domain 2  score: 13.7 bits;  conditional E-value: 2.7e-06
+    alignment_3 138 aldylindassavr.sridssrlavmGhsmGGGGtlrlasqrpdlkaai.plt 188
+                     ld l++da   vr   +d +r+   G smGG Gt  la   p+  aai p+ 
+  Sequence_3382 368 KLDALLTDA---VRkYHVDEDRIYLTGISMGGYGTWALAAAYPERFAAIvPIC 417
+                    466676665...541579*************************9877752665 PP
+
+>> Sequence_1116  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   16.1   0.0   5.2e-07    0.0011     141     183 ..     107     151 ..      71     196 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 16.1 bits;  conditional E-value: 5.2e-07
+    alignment_3 141 ylindassavrsr..idssrlavmGhsmGGGGtlrlasqrpdlka 183
+                    +++n+    +r+r  +    +  +G smGG G+lrla +rp++  
+  Sequence_1116 107 HVLNNVVPYIRQRwqLAEGGIGLLGTSMGGQGALRLAYKRPSIFP 151
+                    556666666666622445568899*****************9743 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         4449  (907767 residues searched)
+Passed MSV filter:                       117  (0.026298); expected 89.0 (0.02)
+Passed bias filter:                       89  (0.0200045); expected 89.0 (0.02)
+Passed Vit filter:                        13  (0.002922); expected 4.4 (0.001)
+Passed Fwd filter:                         2  (0.000449539); expected 0.0 (1e-05)
+Initial search space (Z):               4449  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 13434.95
+//
+[ok]

@@ -1,0 +1,76 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_3.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b21048.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_3  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    9.1e-08   28.2   0.2    7.1e-06   22.0   0.1    2.5  2  Sequence_127  
+    8.3e-05   18.5   0.1    0.00016   17.6   0.1    1.4  1  Sequence_591  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_127  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.0   0.1   8.1e-09   7.1e-06      91     229 ..     111     283 ..     104     307 .. 0.62
+   2 ?   -3.2   0.0      0.38   3.3e+02     247     279 ..     343     375 ..     333     378 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 22.0 bits;  conditional E-value: 8.1e-09
+   alignment_3  91 ispGytgte.asiawlGeriashGfvvitidt.....nttldqpd....sraeqlnaaldylindas...savrsridssrlavmGhsmGGGGtl.. 172
+                    s Gy g +  sia l e +ashGf+v + +      n+  d  d     r  +l+  +d ++++         +rid + + ++Ghs+GG  tl  
+  Sequence_127 111 FSHGYGGINrQSIA-LMEALASHGFIVAAPEHtgnaqNSMTDSFDvaagNRVPDLSFVIDTMLDRDQdpdDIFFERIDETYIGALGHSFGGMTTLgs 206
+                   78999997615666.7799********976531212245556555222247778999999999765411156789****************877622 PP
+
+   alignment_3 173 ...........rlasqrp.......dlkaaipltpw..hlnknwssvrvptliiGadldtiapvlthakpfynslps 229
+                              r+    p       dl+aa   +p+      +  s++vptl++G   d   p+ +    f +   +
+  Sequence_127 207 acgwadapadlRVKAIAPmsavidgDLQAADRSSPYagFSAEQLGSITVPTLLVGGTEDISVPIENNNIAFGQINQA 283
+                   22111111111332222222223335666666666632356678899999999999999999999888888764433 PP
+
+  == domain 2  score: -3.2 bits;  conditional E-value: 0.38
+   alignment_3 247 nipnkiigkysvawlkrfvdndtrytqflcpgp 279
+                      n+ ++ y v+++k  +  +  y ++l ++ 
+  Sequence_127 343 SEFNRLLNLYVVSFFKAQLMGENIYEDYLTSAH 375
+                   556899999999999999999999999987765 PP
+
+>> Sequence_591  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   17.6   0.1   1.8e-07   0.00016     100     245 ..     109     254 ..      87     258 .. 0.65
+
+  Alignments for each domain:
+  == domain 1  score: 17.6 bits;  conditional E-value: 1.8e-07
+   alignment_3 100 asiawlGeriashGfvvitidtnttldqpdsraeqlnaaldylindassa..........vrsridssrlavmGhsmGGGGtlrlasqrpdlkaaip 186
+                    s++++    ashGfvv ++d    l   d  a q++  l   + +   a          +   id srl + Ghs GG Gt+r    r   +  ip
+  Sequence_591 109 QSLSFMT-HWASHGFVVAALDHP-GLKLGDLLAFQMSQNLGSDVARLVEAldnptgdlafLAGAIDMSRLGASGHSAGG-GTIRSWGSRA--QVLIP 200
+                   5666664.579********9964.5666666666665555433322222200000111115678************875.6788666665..56789 PP
+
+   alignment_3 187 ltpwhlnknwssvrvptliiGadldtiapvlthakpfynslpssiskayleldgashfa 245
+                   ++   ++   s      li+G   d +a  +   + + +++    +k  + l +a h+a
+  Sequence_591 201 MASGGTDAGES--LKSSLILGGMDDGVAQYSGTKRGYEQTIG---NKRLVGLANAGHLA 254
+                   99888887655..44678999999999988877777666554...46667777777765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         1769  (391496 residues searched)
+Passed MSV filter:                        46  (0.0260034); expected 35.4 (0.02)
+Passed bias filter:                       38  (0.0214811); expected 35.4 (0.02)
+Passed Vit filter:                         6  (0.00339175); expected 1.8 (0.001)
+Passed Fwd filter:                         2  (0.00113058); expected 0.0 (1e-05)
+Initial search space (Z):               1769  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 5794.14
+//
+[ok]

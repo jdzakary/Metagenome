@@ -1,0 +1,54 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_3.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b22823.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_3  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+  ------ inclusion threshold ------
+      0.017   12.2   0.1       0.05   10.6   0.0    1.7  2  Sequence_1208  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1208  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.6   0.0   1.2e-05      0.05     154     215 ..     105     165 ..      78     174 .. 0.75
+   2 ?   -1.8   0.0     0.071     3e+02      93     110 ..     268     286 ..     254     289 .. 0.84
+
+  Alignments for each domain:
+  == domain 1  score: 10.6 bits;  conditional E-value: 1.2e-05
+    alignment_3 154 idssrlavmGhsmGGGGtlrlasqrpdlkaaipltpwhlnknwssvrvptliiGadldtiap 215
+                    + +++ a +GhsmGG  ++r+a++  +    +  t   l  + + ++  tl++G  l  iap
+  Sequence_1208 105 LPAEQTALLGHSMGGLVSIRFAQHFSSRVRCLVATSPLLGLSVE-ISRATLVVGKMLSVIAP 165
+                    667889****************9876644444444444555555.77788888888888887 PP
+
+  == domain 2  score: -1.8 bits;  conditional E-value: 0.071
+    alignment_3  93 pGytgteasia.wlGeria 110
+                    p + +t+asia wl er+ 
+  Sequence_1208 268 PDWRATAASIAdWLHERVG 286
+                    7888999999889999985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         4217  (848598 residues searched)
+Passed MSV filter:                       103  (0.0244249); expected 84.3 (0.02)
+Passed bias filter:                       77  (0.0182594); expected 84.3 (0.02)
+Passed Vit filter:                        10  (0.00237135); expected 4.2 (0.001)
+Passed Fwd filter:                         1  (0.000237135); expected 0.0 (1e-05)
+Initial search space (Z):               4217  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 25118.50
+//
+[ok]

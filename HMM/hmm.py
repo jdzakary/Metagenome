@@ -141,16 +141,13 @@ def find_sequence(
 
 
 def main():
-    data = search_results('search_output/database_1_model_1')
-    data.sort_values(by='Accuracy', inplace=True)
-    pd.set_option('display.width', None)
-    pd.set_option('display.max_columns', None)
-    sequence = find_sequence(
-        '/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1',
-        data.loc[0]
+    parse_database_multi(
+        model_file='models/model_3.hmm',
+        data_folder='/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2',
+        save_folder='/home/iwe22/zakaryjd/Python_Projects/Metagenome/HMM'
+                    '/search_output/database_2_model_3',
+        processes=10
     )
-    print(len(sequence))
-    print(len(sequence) / 3)
 
 
 if __name__ == '__main__':

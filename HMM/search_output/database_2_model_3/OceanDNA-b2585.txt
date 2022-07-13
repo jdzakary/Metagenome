@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_3.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b2585.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_3  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+     0.0073   12.6   0.5      0.018   11.3   0.0    1.8  2  Sequence_1160  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1160  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -2.1   0.2     0.087   2.1e+02      98     163 ..     321     389 ..     308     401 .. 0.62
+   2 !   11.3   0.0   7.4e-06     0.018      53     120 ..     421     491 ..     412     497 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: -2.1 bits;  conditional E-value: 0.087
+    alignment_3  98 teasia.wlGeriashGfvvitidtnttldqpdsraeql...naaldylinda.ssavrsridssrlavmG 163
+                     ++ i   +  r+a+ G  v++ d    l + ++ a +l   + a+    n a +  v++ id++ la  G
+  Sequence_1160 321 AASGIGkAIATRLAAEGACVVVADLD--LAKAQAAAAELggaDVAMGVAANVAdAEGVQAAIDATLLAFGG 389
+                    45555413678899999888887754..4455555555511133444444433134678888887777655 PP
+
+  == domain 2  score: 11.3 bits;  conditional E-value: 7.4e-06
+    alignment_3  53 rsGpfsvseervsrlsasGfGGGtiyyprenntyGa...vaispGytgteasiawlGeriashGfvvitid 120
+                    ++G f vs+  +  l  +G+GG +iy   +n  + +   +a s   + ++  +  l   +  hG  v  i+
+  Sequence_1160 421 AKGSFLVSKAAAKVLIEQGMGGDVIYISSKNSVFAGpnnIAYSATKADQAHQVRLLAVELGEHGVRVNGIN 491
+                    589****************************9996433488888888888889999999999998887766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         2463  (632107 residues searched)
+Passed MSV filter:                        96  (0.0389769); expected 49.3 (0.02)
+Passed bias filter:                       53  (0.0215185); expected 49.3 (0.02)
+Passed Vit filter:                         4  (0.00162404); expected 2.5 (0.001)
+Passed Fwd filter:                         1  (0.000406009); expected 0.0 (1e-05)
+Initial search space (Z):               2463  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.02
+# Mc/sec: 9355.18
+//
+[ok]

@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_3.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b19691.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_3  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    0.00076   13.2   0.5     0.0033   11.1   0.6    2.0  2  Sequence_328  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_328  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.1   0.6   8.4e-06    0.0033      55     122 ..      24      92 ..      19     151 .. 0.76
+   2 ?   -3.1   0.0      0.18        69      16      56 ..     280     319 ..     272     334 .. 0.58
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 8.4e-06
+   alignment_3  55 Gpfsvse..ervsrlsasGfGGGtiyyprenntyGavaispGytgteasiawlGeriashGfvvitidtn 122
+                   Gpf vs   + ++ +++s +    +yyp + ++   v +  G++ ++  +a + e +as Gf  it++  
+  Sequence_328  24 GPFDVSSgsYAITTFDSSQMD-YSLYYPVNHESEAVVLLVHGFSRDRGVMAGFAEHFASWGFKTITMNLL 92 
+                   888887522556666666654.579****************************************99853 PP
+
+  == domain 2  score: -3.1 bits;  conditional E-value: 0.18
+   alignment_3  16 alrvlaalvlvvalaavaaaanpyerGpnptdallearsGp 56 
+                   al+ ++al +   +  +    + y+  pnp +++ + +   
+  Sequence_328 280 ALQQITALSVNKKMLEPV-FFDLYQNFPNPFNSSTNIKYEL 319
+                   444444444333333332.2345899999988887766555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                          389  (110590 residues searched)
+Passed MSV filter:                         8  (0.0205656); expected 7.8 (0.02)
+Passed bias filter:                        8  (0.0205656); expected 7.8 (0.02)
+Passed Vit filter:                         1  (0.00257069); expected 0.4 (0.001)
+Passed Fwd filter:                         1  (0.00257069); expected 0.0 (1e-05)
+Initial search space (Z):                389  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.00s 00:00:00.00 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+[ok]

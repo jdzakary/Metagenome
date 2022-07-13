@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_3.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b44480.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_3  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    1.5e-05   18.6   0.0    3.3e-05   17.5   0.0    1.5  2  Sequence_233  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_233  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.1   0.0      0.18        61     106     129 ..     100     125 ..      70     132 .. 0.70
+   2 !   17.5   0.0   9.6e-08   3.3e-05     153     185 ..     171     203 ..     150     217 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: -3.1 bits;  conditional E-value: 0.18
+   alignment_3 106 Geriash.Gfvvitidtnttld.qpd 129
+                    +r+as  G+v+++ dt  + d  pd
+  Sequence_233 100 AQRMASElGLVIVAPDTSPRGDdIPD 125
+                   57888855888888888876541455 PP
+
+  == domain 2  score: 17.5 bits;  conditional E-value: 9.6e-08
+   alignment_3 153 ridssrlavmGhsmGGGGtlrlasqrpdlkaai 185
+                   ++d +r  + GhsmGG G+l +  ++p+l  +i
+  Sequence_233 171 QVDENRHGIFGHSMGGHGALTIGLKNPNLYKSI 203
+                   69**************************98766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                          344  (97890 residues searched)
+Passed MSV filter:                         9  (0.0261628); expected 6.9 (0.02)
+Passed bias filter:                        9  (0.0261628); expected 6.9 (0.02)
+Passed Vit filter:                         1  (0.00290698); expected 0.3 (0.001)
+Passed Fwd filter:                         1  (0.00290698); expected 0.0 (1e-05)
+Initial search space (Z):                344  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 2897.54
+//
+[ok]

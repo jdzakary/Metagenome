@@ -1,0 +1,58 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_3.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b36646.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_3  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    0.00074   15.6   0.1     0.0039   13.2   0.1    1.9  2  Sequence_1282  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1282  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.2   0.1   1.9e-06    0.0039      55     189 ..      14     153 ..       5     179 .. 0.76
+   2 ?   -0.2   0.0     0.023        47     196     217 ..     247     268 ..     223     275 .. 0.85
+
+  Alignments for each domain:
+  == domain 1  score: 13.2 bits;  conditional E-value: 1.9e-06
+    alignment_3  55 GpfsvseervsrlsasGfGGGtiyypren.ntyGavaispGytgtea.siawlGeriashGfvvitidtnttldqpdsraeqlnaaldylindass 148
+                     pfs + + v   s      G + yp         v ++ G++gt+   ++   er+ + Gf  ++ d    +   +   +ql      + +  ++
+  Sequence_1282  14 DPFSPARQDVDFPSQGERCHGWLTYPATGtGRVPLVILAHGFAGTRElRLSQYAERFNAAGFATLIFDY-RHFGASEGEPRQLMVPARQIKDWHAA 108
+                    566666666665555555566777775441667778899999998642799999999999999999986.56888888888988777666554333 PP
+
+    alignment_3 149 avrsr....idssrlavmGhsmGGGGtlrlasqrpdlkaaipltp 189
+                       +r    id++rla  G s+ GG  + +a q  ++ a++   p
+  Sequence_1282 109 LEFARglpgIDTARLALWGTSFAGGLVITVAAQDGNVAATVSQCP 153
+                    322333344*****************************9998777 PP
+
+  == domain 2  score: -0.2 bits;  conditional E-value: 0.023
+    alignment_3 196 wssvrvptliiGadldtiapvl 217
+                     ++vr p+l+   + dt+ap +
+  Sequence_1282 247 ARKVRCPALLQLCEHDTVAPAA 268
+                    56899**************986 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         2050  (442460 residues searched)
+Passed MSV filter:                        61  (0.0297561); expected 41.0 (0.02)
+Passed bias filter:                       40  (0.0195122); expected 41.0 (0.02)
+Passed Vit filter:                         5  (0.00243902); expected 2.0 (0.001)
+Passed Fwd filter:                         1  (0.000487805); expected 0.0 (1e-05)
+Initial search space (Z):               2050  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 13096.82
+//
+[ok]

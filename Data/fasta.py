@@ -63,9 +63,9 @@ def main():
         'AEV21261.1': 'HQ704839.1'
     }
     mega_fasta(
-        codes=['HQ147785.1', 'HQ147787.1'],
-        save_path='targets/targets_2.txt',
-        db='nucleotide',
+        codes=codes.keys(),
+        save_path='targets/targets_3.txt',
+        db='protein',
         pbar=True
     )
 

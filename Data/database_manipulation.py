@@ -1,8 +1,12 @@
 import gzip
 import shutil
 import os
+from functools import partial
 from tqdm import tqdm
 from Bio import SeqIO
+from Bio.SeqRecord import SeqRecord
+from Other.utility import JobMachine
+from warnings import simplefilter
 
 
 def unzip_file(path: str) -> None:
@@ -23,21 +27,63 @@ def remove_zips(folder: str) -> None:
         os.remove(f'{folder}/{file}')
 
 
-def translate_file(
-    input_path: str,
-    save_path: str
-):
-    sequences = [x for x in SeqIO.parse(input_path, "fasta")]
-    translated = [i.translate() for i in sequences]
-    for i in translated:
-        print(i.seq)
+def translate_file(file_path: str) -> list[SeqRecord]:
+    sequences = [x for x in SeqIO.parse(file_path, "fasta")]
+    return [i.translate() for i in sequences]
+
+
+def convert_datafile(
+    file_path: str,
+    threshold: int
+) -> str:
+    sequences = translate_file(file_path)
+    keep = []
+    counter = 0
+    for i in sequences:
+        for x in i.seq.split('*'):
+            if len(x) > threshold:
+                counter += 1
+                keep.append(f'>Sequence_{counter}')
+                keep.append(str(x))
+    return '\n'.join(keep)
+
+
+def worker(
+    d_folder: str,
+    s_folder: str,
+    thresh: int,
+    file_name: str,
+) -> None:
+    with open(f'{s_folder}/{file_name}', 'w') as handle:
+        handle.write(
+            convert_datafile(f'{d_folder}/{file_name}', thresh)
+        )
+
+
+def convert_database(
+    data_folder: str,
+    save_folder: str,
+    threshold: int,
+    cpus: int
+) -> None:
+    simplefilter('ignore')
+    assert data_folder[-1] != '/'
+    assert save_folder[-1] != '/'
+    new_worker = partial(worker, data_folder, save_folder, threshold)
+    job_machine = JobMachine(
+        processes=cpus,
+        worker_func=new_worker,
+        args_list=os.listdir(data_folder)
+    )
+    job_machine.start()
 
 
 def main():
-    translate_file(
-        '/home/iwe22/zakaryjd/Metagenome/GenomeFiles/'
-        'database_1/OceanDNA-b33934.txt',
-        'hello'
+    convert_database(
+        '/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1',
+        '/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2',
+        100,
+        10
     )
 
 
