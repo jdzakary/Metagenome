@@ -1,8 +1,7 @@
 import os
 import pandas as pd
 from functools import partial
-from typing import Union, TextIO
-
+from typing import Union, TextIO, Iterable
 from Other.utility import JobMachine, simple_run
 
 
@@ -123,7 +122,7 @@ def search_results(result_folder: str) -> pd.DataFrame:
 def get_lines(
     file: TextIO,
     line_numbers: list[int]
-):
+) -> Iterable[str]:
     return (x for i, x in enumerate(file) if i in line_numbers)
 
 
@@ -136,7 +135,7 @@ def find_sequence(
     number = row["SubFile"] * 2 - 1
     with open(file_path, 'r') as file:
         line = get_lines(file, [number])
-        data: str = list(line)[0]
+        data = list(line)[0]
     return data[row["Ali-From"]-1:row["Ali-To"]]
 
 

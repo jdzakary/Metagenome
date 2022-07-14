@@ -16,9 +16,8 @@ class JobMachine:
             self.lock = mp.Lock()
 
         def increment(self):
-            self.lock.acquire()
-            self.counter.value += 1
-            self.lock.release()
+            with self.lock:
+                self.counter.value += 1
 
         @property
         def value(self) -> int:
