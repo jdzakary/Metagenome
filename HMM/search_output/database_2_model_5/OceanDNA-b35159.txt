@@ -1,0 +1,71 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b35159.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+     0.0024   13.9   0.0     0.0048   12.9   0.0    1.5  1  Sequence_1207  
+      0.007   12.4   0.0      0.013   11.5   0.0    1.5  2  Sequence_950   
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1207  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.9   0.0   5.6e-06    0.0048      58     153 ..      44     148 ..      33     176 .. 0.69
+
+  Alignments for each domain:
+  == domain 1  score: 12.9 bits;  conditional E-value: 5.6e-06
+    alignment_5  58 pgytateesiawlgeriasqgfvvitidtitrldq..pd..sraeq....lqaaldhlinrassvvrs..ridssrlavmghsmggggalrlaaqr 143
+                     g+t+++e  +++   +a  gf vi  d+  +  +   d   r       l+  +d +    ++++r+   +  +r+av g smgg  al + a+ 
+  Sequence_1207  44 HGFTSSKEVYSYFAVALAQAGFRVIMPDADMHGSRynGDteMRMTHfweiLKQNIDEVP-TLEAALREndWVADDRFAVAGASMGGMTALGAMARY 138
+                    69999999999999999999999998876544332113301344331111444444444.334455541258899*******************99 PP
+
+    alignment_5 144 tdlkaaiplt 153
+                    +++++   + 
+  Sequence_1207 139 PQIHSVACMM 148
+                    9998766555 PP
+
+>> Sequence_950  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -3.2   0.0      0.46   3.9e+02      48      82 ..      69     106 ..      62     119 .. 0.74
+   2 !   11.5   0.0   1.5e-05     0.013      99     153 ..     138     189 ..     122     249 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: -3.2 bits;  conditional E-value: 0.46
+   alignment_5  48 t...ntygavaispgytateesiawlgeriasqgfvvi 82 
+                   +   +t   v +     + +e i  l  r+a +g++ +
+  Sequence_950  69 KvyeGTLPVVLVVQEIFGVHEHIRDLCRRLALEGYLAV 106
+                   43446777777777888888899999999999998776 PP
+
+  == domain 2  score: 11.5 bits;  conditional E-value: 1.5e-05
+   alignment_5  99 qlqaaldhlinrassvvrsridssrlavmghsmggggalrlaaqrtdlkaaiplt 153
+                   q+ + ldh+    + + r   d  r+a+ g   gg  +   aa++++++aa    
+  Sequence_950 138 QVLSDLDHVA---NWAARHDGDIRRMAITGFCWGGRISWLFAAHNPQVRAAAAWY 189
+                   5666778876...6778999*****************************997543 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                         1695  (371571 residues searched)
+Passed MSV filter:                        37  (0.0218289); expected 33.9 (0.02)
+Passed bias filter:                       26  (0.0153392); expected 33.9 (0.02)
+Passed Vit filter:                         5  (0.00294985); expected 1.7 (0.001)
+Passed Fwd filter:                         2  (0.00117994); expected 0.0 (1e-05)
+Initial search space (Z):               1695  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 9698.00
+//
+[ok]

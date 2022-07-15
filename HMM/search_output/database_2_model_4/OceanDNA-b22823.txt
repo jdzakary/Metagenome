@@ -1,0 +1,54 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_4.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b22823.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_4  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+  ------ inclusion threshold ------
+      0.011   12.7   0.1      0.035   11.1   0.0    1.7  2  Sequence_1208  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1208  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.1   0.0   8.3e-06     0.035     154     215 ..     105     165 ..      79     174 .. 0.75
+   2 ?   -1.6   0.0     0.064   2.7e+02      92     109 ..     267     285 ..     248     289 .. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 11.1 bits;  conditional E-value: 8.3e-06
+    alignment_4 154 idssrlavmGhsmGGGGtlrlasqrpdlkaaipltpwhlnknwssvrvptliiGaeldtiap 215
+                    + +++ a +GhsmGG  ++r a++ ++    +  t+  l  + + ++  tl++G  l  iap
+  Sequence_1208 105 LPAEQTALLGHSMGGLVSIRFAQHFSSRVRCLVATSPLLGLSVE-ISRATLVVGKMLSVIAP 165
+                    567889****************9876644444444444444544.77889999999999988 PP
+
+  == domain 2  score: -1.6 bits;  conditional E-value: 0.064
+    alignment_4  92 spGytgtqasia.wlGeri 109
+                     p + +t+asia wl er+
+  Sequence_1208 267 EPDWRATAASIAdWLHERV 285
+                    5888999999988999998 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         4217  (848598 residues searched)
+Passed MSV filter:                       105  (0.0248992); expected 84.3 (0.02)
+Passed bias filter:                       79  (0.0187337); expected 84.3 (0.02)
+Passed Vit filter:                        10  (0.00237135); expected 4.2 (0.001)
+Passed Fwd filter:                         1  (0.000237135); expected 0.0 (1e-05)
+Initial search space (Z):               4217  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.00s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 25118.50
+//
+[ok]

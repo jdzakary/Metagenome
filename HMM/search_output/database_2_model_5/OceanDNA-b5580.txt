@@ -1,0 +1,64 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b5580.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    3.1e-12   41.2   0.1    4.9e-12   40.5   0.1    1.2  1  Sequence_188  
+    1.5e-06   22.5   0.0      2e-06   22.1   0.0    1.1  1  Sequence_87   
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_188  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   40.5   0.1   2.1e-14   4.9e-12      51     209 ..      71     237 ..      35     246 .. 0.76
+
+  Alignments for each domain:
+  == domain 1  score: 40.5 bits;  conditional E-value: 2.1e-14
+   alignment_5  51 ygavaispgytateesiawlgeriasqgfvvitidtitrldqpdsrae...qlqaaldhlinrassvvrsrid...ssrlavmghsmggggalrlaa 141
+                   +  +    g++ + ++   + e +  qg+++  + t   l    s ++   +l     ++    +s+v s  +    ++  +mghsmggg ++ +a+
+  Sequence_188  71 FPVIVFGHGFAMGWDAYQNIWEHVVPQGYIMAFVRTEGSLIPAPSHGDfgqDLALVSTKML-ALNSTVGSPFNgkvKQKSVIMGHSMGGGATMLAAS 166
+                   4556667788888888888999999999999999999988777776642114444445555.67899988776222457889*************** PP
+
+   alignment_5 142 qrtdlkaaipltgwhlrkn....wssvrvptlvvgadldtiapvashakafynslpsdldkayleldgashl 209
+                   +++++   + l +  ++         ++vp+l+     d ++p a h  ++y+ + s   k+++ + g +h 
+  Sequence_188 167 NNANIAGIVGLAPAETNPTaigvCGNITVPALIFSGSSDGVTPPAEHHIPIYQGIAST-CKSFVSITGGAHC 237
+                   ***************9976222246789**************************9986.5899999999885 PP
+
+>> Sequence_87  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   22.1   0.0   8.5e-09     2e-06     118     208 ..     148     242 ..     125     262 .. 0.75
+
+  Alignments for each domain:
+  == domain 1  score: 22.1 bits;  conditional E-value: 8.5e-09
+  alignment_5 118 ridssrlavmghsmggggalrlaaqrtd.lkaaipltgwhlrkn.wssvrvptlvvgadldtiapvashakaf...ynslpsdldkayleldgash 208
+                   +d++r+ v+g smgg g+l+ a + ++ + aa+ l g    k+     +vp  +    +d   p++   k      n      +  y  l+ga h
+  Sequence_87 148 DVDTNRVYVVGMSMGGYGTLNFAGKYPEhVAAAVALCGGGNIKDgCNLATVPLWIQHGTMDQAVPISESEKIVraiKNCN-GGENLKYTALKGANH 242
+                  489*********************9986367899999876666515567889999999*******997665431103322.233445677777766 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                          473  (127552 residues searched)
+Passed MSV filter:                        11  (0.0232558); expected 9.5 (0.02)
+Passed bias filter:                        8  (0.0169133); expected 9.5 (0.02)
+Passed Vit filter:                         4  (0.00845666); expected 0.5 (0.001)
+Passed Fwd filter:                         2  (0.00422833); expected 0.0 (1e-05)
+Initial search space (Z):                473  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 3329.11
+//
+[ok]

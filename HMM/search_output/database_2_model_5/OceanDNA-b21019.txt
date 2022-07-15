@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b21019.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+     0.0082   12.9   0.0      0.021   11.6   0.0    1.6  2  Sequence_1371  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1371  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   11.6   0.0   7.1e-06     0.021      85     152 ..      91     160 ..      85     165 .. 0.76
+   2 ?   -3.6   0.0       0.3     9e+02     153     176 ..     226     249 ..     219     265 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 11.6 bits;  conditional E-value: 7.1e-06
+    alignment_5  85 dtitrldqpd.sraeqlqa..aldhlinrassvvrsridssrlavmghsmggggalrlaaqrtdlkaaipl 152
+                     t+  +dqp   r+  l++   ++ +  + +  v + ++ sr  ++gh mg   al+ a +r++  a + l
+  Sequence_1371  91 HTVIAFDQPGhGRSGSLDSlgEIEAMA-KFTGRVIDELEISRAVLLGHEMGAAVALQTAHDRPQQTAGLVL 160
+                    688889999625777776511344555.444556688999***********************99887765 PP
+
+  == domain 2  score: -3.6 bits;  conditional E-value: 0.3
+    alignment_5 153 tgwhlrknwssvrvptlvvgadld 176
+                    + w      + + +ptlvv    d
+  Sequence_1371 226 QQWTGGARLAEILAPTLVVNGTED 249
+                    566666777788889999876544 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                         3007  (614584 residues searched)
+Passed MSV filter:                        42  (0.0139674); expected 60.1 (0.02)
+Passed bias filter:                       37  (0.0123046); expected 60.1 (0.02)
+Passed Vit filter:                         7  (0.0023279); expected 3.0 (0.001)
+Passed Fwd filter:                         1  (0.000332557); expected 0.0 (1e-05)
+Initial search space (Z):               3007  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.01s 00:00:00.03 Elapsed: 00:00:00.01
+# Mc/sec: 16040.64
+//
+[ok]

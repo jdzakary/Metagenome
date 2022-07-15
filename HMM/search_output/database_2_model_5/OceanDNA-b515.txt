@@ -1,0 +1,46 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b515.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+     0.0012   15.4   0.0     0.0013   15.3   0.0    1.1  1  Sequence_1005  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1005  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   15.3   0.0   5.1e-07    0.0013     108     148 ..       7      49 ..       1      87 [. 0.83
+
+  Alignments for each domain:
+  == domain 1  score: 15.3 bits;  conditional E-value: 5.1e-07
+    alignment_5 108 inrassvvrsrid..ssrlavmghsmggggalrlaaqrtdlka 148
+                     +  + +v + id  ++r+ vmghs+gg  a+r+a   td  a
+  Sequence_1005   7 AHDVACAVETAIDegAERVVVMGHSFGGAVAVRVAVVMTDEVA 49 
+                    55566778888984458******************98888655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                         2512  (558261 residues searched)
+Passed MSV filter:                        69  (0.0274682); expected 50.2 (0.02)
+Passed bias filter:                       46  (0.0183121); expected 50.2 (0.02)
+Passed Vit filter:                         4  (0.00159236); expected 2.5 (0.001)
+Passed Fwd filter:                         1  (0.000398089); expected 0.0 (1e-05)
+Initial search space (Z):               2512  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 14570.61
+//
+[ok]

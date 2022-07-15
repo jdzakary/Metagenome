@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b38636.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    0.00021   15.7   0.1    0.00062   14.1   0.0    1.7  2  Sequence_415  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_415  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   -1.9   0.0     0.092        48      36      63 ..      33      60 ..      23      65 .. 0.78
+   2 !   14.1   0.0   1.2e-06   0.00062      61     143 ..     114     194 ..      89     204 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: -1.9 bits;  conditional E-value: 0.092
+   alignment_5 36 gfgggtiyypretntygavaispgytat 63
+                   + gg +   +++++  a+ai  g ta+
+  Sequence_415 33 TLFGGVMLATQQAQALSALAIVNGLTAS 60
+                  5557777888888999999999999986 PP
+
+  == domain 2  score: 14.1 bits;  conditional E-value: 1.2e-06
+   alignment_5  61 tateesiawlgeriasqgfvvitid..titrldqpdsraeqlqaaldhlinrassvvrsridssrlavmghsmggggalrlaaqr 143
+                    +++e  a++g+ +a  g+v   i+     +   pd   +  qa      n a+s      d++rlav+ghs g    + + +++
+  Sequence_415 114 RGSKEEYAFVGQSLAQAGYVTAVINyrKAPKHVYPDFVEDTAQAV-AWSYNNAASL---HADPQRLAVIGHSAGAFNVVAAMSNE 194
+                   4778999************97766611556677899877766654.4555455554...68***********9988777766665 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                          518  (144783 residues searched)
+Passed MSV filter:                        15  (0.0289575); expected 10.4 (0.02)
+Passed bias filter:                       14  (0.027027); expected 10.4 (0.02)
+Passed Vit filter:                         1  (0.0019305); expected 0.5 (0.001)
+Passed Fwd filter:                         1  (0.0019305); expected 0.0 (1e-05)
+Initial search space (Z):                518  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.00u 0.01s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 3778.84
+//
+[ok]

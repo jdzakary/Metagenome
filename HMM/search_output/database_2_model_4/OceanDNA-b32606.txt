@@ -1,0 +1,54 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_4.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b32606.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_4  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+  ------ inclusion threshold ------
+      0.011   12.9   0.1       0.39    7.8   0.0    2.2  2  Sequence_3261  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_3261  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    7.8   0.0   8.6e-05      0.39     153     169 ..     194     210 ..     178     223 .. 0.85
+   2 ?    2.8   0.0    0.0029        13     191     243 ..     264     318 ..     243     325 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 7.8 bits;  conditional E-value: 8.6e-05
+    alignment_4 153 ridssrlavmGhsmGGG 169
+                    r d +r+a++GhsmGG 
+  Sequence_3261 194 RPDRDRIAAIGHSMGGQ 210
+                    7799***********96 PP
+
+  == domain 2  score: 2.8 bits;  conditional E-value: 0.0029
+    alignment_4 191 hlnknwssvrvptliiGaeld.....tiapvsthakpfynslpssiskayleldgash 243
+                     ln ++s +++p l++  eld     t    + ha pf+ s      +a l l ga h
+  Sequence_3261 264 ALNPDFSHMTTPSLVVCGELDdnphlTTMGPAWHADPFHLS---PGARALLTLAGAGH 318
+                    47889**************9934433233334577777654...33467777777776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         4470  (1118636 residues searched)
+Passed MSV filter:                       119  (0.0266219); expected 89.4 (0.02)
+Passed bias filter:                       87  (0.0194631); expected 89.4 (0.02)
+Passed Vit filter:                        10  (0.00223714); expected 4.5 (0.001)
+Passed Fwd filter:                         1  (0.000223714); expected 0.0 (1e-05)
+Initial search space (Z):               4470  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.02u 0.01s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 16555.81
+//
+[ok]

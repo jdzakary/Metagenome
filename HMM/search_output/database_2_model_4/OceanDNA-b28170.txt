@@ -1,0 +1,54 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_4.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b28170.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_4  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+  ------ inclusion threshold ------
+      0.012   12.0   0.0       0.19    8.1   0.0    2.0  2  Sequence_113  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_113  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    1.9   0.0    0.0055        14     156     187 ..      56      87 ..      43     127 .. 0.67
+   2 ?    8.1   0.0   7.1e-05      0.19     196     237 ..     170     206 ..     161     236 .. 0.67
+
+  Alignments for each domain:
+  == domain 1  score: 1.9 bits;  conditional E-value: 0.0055
+   alignment_4 156 ssrlavmGhsmGGGGtlrlasqrpdlkaaipl 187
+                   ++++a +G smGG  ++ l  + p+  + + l
+  Sequence_113  56 PAKFALAGLSMGGIVAMELLRRAPERITRLAL 87 
+                   56899********9999998888875544444 PP
+
+  == domain 2  score: 8.1 bits;  conditional E-value: 7.1e-05
+   alignment_4 196 wssvrvptliiGaeldtiapvsthakpfynslpssiskayle 237
+                    +  +vptli+    dt++p+++ha  f  +l   i+ a le
+  Sequence_113 170 LRRCKVPTLILCGAHDTLTPLKRHA--FMADL---IPYARLE 206
+                   56789*******************8..43333...4444454 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         2616  (596244 residues searched)
+Passed MSV filter:                        81  (0.0309633); expected 52.3 (0.02)
+Passed bias filter:                       57  (0.021789); expected 52.3 (0.02)
+Passed Vit filter:                         5  (0.00191131); expected 2.6 (0.001)
+Passed Fwd filter:                         1  (0.000382263); expected 0.0 (1e-05)
+Initial search space (Z):               2616  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 17648.82
+//
+[ok]

@@ -1,0 +1,66 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b40473.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+    0.00056   15.3   0.0      0.013   10.8   0.0    2.3  2  Sequence_146  
+     0.0009   14.6   0.0     0.0015   13.9   0.0    1.3  1  Sequence_241  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_146  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    2.1   0.0     0.011         6      33      76 ..      17      65 ..       5     103 .. 0.76
+   2 !   10.8   0.0   2.4e-05     0.013     120     144 ..     148     172 ..     131     188 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 2.1 bits;  conditional E-value: 0.011
+   alignment_5 33 sadgfgggtiyypret.....ntygavaispgytateesiawlgerias 76
+                  s+  fgg  i y +e+     + + +v + pg t     + wl    +s
+  Sequence_146 17 SSRSFGGEQIRYKHESavlscTMHFSVYMPPGATQDSPVLYWLSGLTCS 65
+                  3457999999999998555534456788889999888889998655444 PP
+
+  == domain 2  score: 10.8 bits;  conditional E-value: 2.4e-05
+   alignment_5 120 dssrlavmghsmggggalrlaaqrt 144
+                   + s+ a+ ghsmgg gal +a +++
+  Sequence_146 148 NHSKRAISGHSMGGHGALVVALRNP 172
+                   67889**************998887 PP
+
+>> Sequence_241  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.9   0.0   2.7e-06    0.0015     108     155 ..     108     157 ..      97     176 .. 0.81
+
+  Alignments for each domain:
+  == domain 1  score: 13.9 bits;  conditional E-value: 2.7e-06
+   alignment_5 108 inrassvvr..sridssrlavmghsmggggalrlaaqrtdlkaaipltgw 155
+                   i+ a  +vr  s++d+sr+a +g+ +gg   l+la   +d++  i ++g 
+  Sequence_241 108 IQVALDTVRdlSQVDPSRVAAIGYCFGGMAVLELARSGADVEGVISVHGL 157
+                   4455566664469******************************9998875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                         1060  (263548 residues searched)
+Passed MSV filter:                        20  (0.0188679); expected 21.2 (0.02)
+Passed bias filter:                       14  (0.0132075); expected 21.2 (0.02)
+Passed Vit filter:                         3  (0.00283019); expected 1.1 (0.001)
+Passed Fwd filter:                         2  (0.00188679); expected 0.0 (1e-05)
+Initial search space (Z):               1060  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.00
+# Mc/sec: inf
+//
+[ok]

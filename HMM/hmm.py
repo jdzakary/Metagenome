@@ -119,6 +119,16 @@ def search_results(result_folder: str) -> pd.DataFrame:
     return data
 
 
+def save_summary(folder_name: str) -> None:
+    assert folder_name[-1] != '/'
+    data = search_results(f'search_output/{folder_name}')
+    data.sort_values(by='Accuracy', inplace=True, ascending=False)
+    data.to_csv(f'results/summary/{folder_name}.csv', index=False)
+    data[
+        data['HMM-Length'] >= 200
+    ].to_csv(f'results/summary/{folder_name}_filtered.csv', index=False)
+
+
 def get_lines(
     file: TextIO,
     line_numbers: list[int]
@@ -139,11 +149,43 @@ def find_sequence(
     return data[row["Ali-From"]-1:row["Ali-To"]]
 
 
+def full_run(
+    model_id: int,
+    database_id: int,
+    cpus: int
+) -> None:
+    print('Checking for Alignment File')
+    assert os.path.exists(f'../Data/alignments/alignment_{model_id}.txt')
+    print('Checking for Database Folder')
+    assert os.path.exists(
+        f'/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_{database_id}'
+
+    )
+    try:
+        os.mkdir(f'search_output/database_{database_id}_model_{model_id}')
+    except FileExistsError:
+        print('Output Folder Already Exists')
+    else:
+        print('Created Output Folder')
+    print('Building HMM Model')
+    hmm_build(
+        alignment_file=f'../Data/alignments/alignment_{model_id}.txt',
+        save_path=f'models/model_{model_id}.hmm',
+        log_path=f'logs/log_{model_id}.txt'
+    )
+    assert os.path.exists(f'models/model_{model_id}.hmm')
+    print('Searching Database Using HMM Model')
+    parse_database_multi(
+        model_file=f'models/model_{model_id}.hmm',
+        data_folder=f'/home/iwe22/zakaryjd/Metagenome'
+                    f'/GenomeFiles/database_{database_id}',
+        save_folder=f'search_output/database_{database_id}_model_{model_id}',
+        processes=cpus
+    )
+
+
 def main():
-    pd.set_option('display.width', None)
-    pd.set_option('display.max_columns', None)
-    data = pd.read_csv('results/summary/database_2_model_3_filtered.csv')
-    print(data)
+    full_run(6, 2, 10)
 
 
 if __name__ == '__main__':

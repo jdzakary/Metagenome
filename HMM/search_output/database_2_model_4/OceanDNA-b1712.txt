@@ -1,0 +1,54 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_4.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b1712.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_4  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+  ------ inclusion threshold ------
+      0.015   11.7   0.3       0.98    5.7   0.1    2.2  2  Sequence_1930  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1930  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    5.7   0.1   0.00037      0.98     157     181 ..      93     117 ..      77     126 .. 0.85
+   2 ?    4.1   0.0    0.0011         3     154     218 ..     141     207 ..     130     237 .. 0.78
+
+  Alignments for each domain:
+  == domain 1  score: 5.7 bits;  conditional E-value: 0.00037
+    alignment_4 157 srlavmGhsmGGGGtlrlasqrpdl 181
+                    +r+ v G smGG  tl las++  +
+  Sequence_1930  93 ERVFVTGLSMGGALTLWLASRHNAI 117
+                    6999***************998765 PP
+
+  == domain 2  score: 4.1 bits;  conditional E-value: 0.0011
+    alignment_4 154 idssrlav..mGhsmGGGGtlrlasqrpdlkaaipltpwhlnknwssvrvptliiGaeldtiapvst 218
+                    +++ rl++  +G  +     + la +++ l   + l     n + ++++ ptli+ +++d + p  t
+  Sequence_1930 141 VEAGRLTIeaIGNDIAKPDVVELAYDETPLAPLLSLVEAVNNFDLEAITCPTLIMVSDQDHVVPPET 207
+                    5666665422677777777788888888888888888888899999**************9998654 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         2662  (505160 residues searched)
+Passed MSV filter:                        96  (0.0360631); expected 53.2 (0.02)
+Passed bias filter:                       58  (0.0217881); expected 53.2 (0.02)
+Passed Vit filter:                         7  (0.0026296); expected 2.7 (0.001)
+Passed Fwd filter:                         1  (0.000375657); expected 0.0 (1e-05)
+Initial search space (Z):               2662  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.02
+# Mc/sec: 7476.37
+//
+[ok]

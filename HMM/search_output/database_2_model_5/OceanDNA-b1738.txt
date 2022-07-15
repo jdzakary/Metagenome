@@ -1,0 +1,54 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b1738.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+  ------ inclusion threshold ------
+       0.02   11.9   0.1      0.094    9.7   0.0    2.1  2  Sequence_534  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_534  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?    9.7   0.0   2.6e-05     0.094     116     139 ..     129     152 ..      19     167 .. 0.87
+   2 ?   -0.1   0.0     0.025        91     163     209 ..     219     263 ..     185     271 .. 0.74
+
+  Alignments for each domain:
+  == domain 1  score: 9.7 bits;  conditional E-value: 2.6e-05
+   alignment_5 116 rsridssrlavmghsmggggalrl 139
+                      +d++r+av+ghs gg  al +
+  Sequence_534 129 EFALDPDRVAVVGHSAGGHLALWV 152
+                   4569*************9988865 PP
+
+  == domain 2  score: -0.1 bits;  conditional E-value: 0.025
+   alignment_5 163 svrvptlvvgadldtiapvashakafynslpsdldkaylel.dgashl 209
+                    v vp l+v    d+i p    a+a+     s  d+  lel  ga h+
+  Sequence_534 219 PVLVPQLIVQGRDDAIVPP-DRAEAYVAMANS--DRVELELvAGADHF 263
+                   5789999999999999985.467776655444..45666653577776 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                         3613  (962023 residues searched)
+Passed MSV filter:                        74  (0.0204816); expected 72.3 (0.02)
+Passed bias filter:                       41  (0.0113479); expected 72.3 (0.02)
+Passed Vit filter:                         5  (0.00138389); expected 3.6 (0.001)
+Passed Fwd filter:                         1  (0.000276778); expected 0.0 (1e-05)
+Initial search space (Z):               3613  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 25108.80
+//
+[ok]

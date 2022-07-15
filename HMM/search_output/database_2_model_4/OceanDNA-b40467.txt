@@ -1,0 +1,71 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_4.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b40467.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_4  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+     0.0036   13.0   1.0     0.0061   12.2   0.1    1.7  2  Sequence_458  
+     0.0045   12.7   0.1     0.0065   12.1   0.1    1.2  1  Sequence_631  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_458  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.2   0.1   7.8e-06    0.0061      92     187 ..      77     169 ..      53     187 .. 0.81
+   2 ?   -2.3   0.1       0.2   1.6e+02      93     125 ..     280     312 ..     269     319 .. 0.72
+
+  Alignments for each domain:
+  == domain 1  score: 12.2 bits;  conditional E-value: 7.8e-06
+   alignment_4  92 spGytgtqasiawlGeriashGfvvitidtitt..ldqpd.srarqlnaaldylindassavrsridssrlavmGhsmGGGGtlrlasqrpdlkaai 185
+                     Gy  +++  + +   +a +G+vv+++d       d p  s +    aal yl++       + +d++ +   GhsmGG   l  a+  pd   ++
+  Sequence_458  77 VHGYINSREVQSGFAIELARRGYVVLALDQSGHgySDAPAfSNGFGGPAALRYLRS------LDIVDPDNIGLEGHSMGGWTVLAAAAAMPDAYRSM 167
+                   458888888888888899**********98654226777546777789******98......5679**********************999976666 PP
+
+   alignment_4 186 pl 187
+                    l
+  Sequence_458 168 VL 169
+                   55 PP
+
+  == domain 2  score: -2.3 bits;  conditional E-value: 0.2
+   alignment_4  93 pGytgtqasiawlGeriashGfvvitidtittl 125
+                    G tg+      +G  +a  Gfvv+   +i ++
+  Sequence_458 280 AGVTGQIWFFKEIGTLLAFVGFVVLLCGAIKQF 312
+                   4555555555567999999*****988777665 PP
+
+>> Sequence_631  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.1   0.1   8.3e-06    0.0065     126     187 ..     146     211 ..     123     223 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 12.1 bits;  conditional E-value: 8.3e-06
+   alignment_4 126 dqpdsrarqlnaaldylindassavrs..ridssr..lavmGhsmGGGGtlrlasqrpdlkaaipl 187
+                   ++ +s + q n   d++i+d    v +  r  + r   a++G smGG G+l la ++pd+  ++  
+  Sequence_631 146 NYAESAGGQRNHWEDHVIEDVIGYVDAnfRTHARRegRAIAGLSMGGYGALMLALRHPDMFVSVAS 211
+                   666777777777777877776655543223344442279********************9877765 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         1571  (370157 residues searched)
+Passed MSV filter:                        30  (0.0190961); expected 31.4 (0.02)
+Passed bias filter:                       24  (0.0152769); expected 31.4 (0.02)
+Passed Vit filter:                         5  (0.00318269); expected 1.6 (0.001)
+Passed Fwd filter:                         2  (0.00127307); expected 0.0 (1e-05)
+Initial search space (Z):               1571  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 10956.65
+//
+[ok]

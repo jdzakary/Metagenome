@@ -1,0 +1,71 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b31270.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+    0.00062   16.3   0.1        0.1    9.0   0.0    2.2  2  Sequence_1011  
+     0.0016   14.9   0.1     0.0034   13.8   0.1    1.4  1  Sequence_447   
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1011  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !    9.0   0.0   8.8e-05       0.1      70     161 ..     119     213 ..      92     224 .. 0.65
+   2 !    5.1   0.0    0.0013       1.5     175     248 ..     268     340 ..     248     347 .. 0.70
+
+  Alignments for each domain:
+  == domain 1  score: 9.0 bits;  conditional E-value: 8.8e-05
+    alignment_5  70 lgeriasqgfvvitidtitrldqp..dsraeqlqaaldhlinrassvvrsridssrlavmghsmggggalrlaaqrtdlkaai....pltgwhlrk 159
+                    + e ++++g+ v+  d  t l     +    ++ + +  l+  a+  +r+ + + ++ ++ghs+gg   l +aa+  +++a      p ++ h+ +
+  Sequence_1011 119 IAEGLTAHGIAVLRFDF-TGLGASegEFANTNFTSNVGDLV-AAAEYMRDHLSAPQI-LIGHSLGGAAVLAAAAKIDEVEAVCtigaPSDPGHVAN 211
+                    55566666766666663.33433300333444555555666.566677777766665.78****************99999752222556666666 PP
+
+    alignment_5 160 nw 161
+                    n+
+  Sequence_1011 212 NF 213
+                    65 PP
+
+  == domain 2  score: 5.1 bits;  conditional E-value: 0.0013
+    alignment_5 175 ldtiapvashakafynslpsdldkayleldgashlvsnipdkiiakysv.awlkrfvdddlrye.qflcpapddfl 248
+                    +d i  +    + +     +   k+++ ld a hl s+  d + +   + aw  r++      e      ap+d +
+  Sequence_1011 268 IDNIVGIDNAQDIYL---NARHPKSFVSLDDADHLLSKHEDAVYCANVIaAWAARYIGTSSESEtSAALNAPEDAV 340
+                    555555554444443...4456799****************9976555528*****98776554144556777776 PP
+
+>> Sequence_447  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   13.8   0.1   2.9e-06    0.0034     122     145 ..     167     190 ..     162     203 .. 0.86
+
+  Alignments for each domain:
+  == domain 1  score: 13.8 bits;  conditional E-value: 2.9e-06
+   alignment_5 122 srlavmghsmggggalrlaaqrtd 145
+                   +r  +mghsmgg gal++a +++ 
+  Sequence_447 167 DRQGIMGHSMGGHGALTIALKNPG 190
+                   6889***************99875 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                         2355  (513204 residues searched)
+Passed MSV filter:                        51  (0.0216561); expected 47.1 (0.02)
+Passed bias filter:                       37  (0.0157113); expected 47.1 (0.02)
+Passed Vit filter:                         4  (0.00169851); expected 2.4 (0.001)
+Passed Fwd filter:                         2  (0.000849257); expected 0.0 (1e-05)
+Initial search space (Z):               2355  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 13394.62
+//
+[ok]

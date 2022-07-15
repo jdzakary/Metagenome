@@ -1,0 +1,47 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b33510.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+  ------ inclusion threshold ------
+      0.019   11.6   0.3      0.028   11.0   0.3    1.2  1  Sequence_1649  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1649  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   11.0   0.3   1.1e-05     0.028      87     146 ..      24      84 ..       4      93 .. 0.73
+
+  Alignments for each domain:
+  == domain 1  score: 11.0 bits;  conditional E-value: 1.1e-05
+    alignment_5  87 itrldqpdsraeqlqaaldhlinra..ssvvrsridssrlavmghsmggggalrlaaqrtdl 146
+                     +++ q  +r++q+ aa dh  +ra  + v    +d+  +a +   +ggg  +r+ aqr+ l
+  Sequence_1649  24 YATVRQGCTRGRQITAAHDHRGKRArtDQVRCGLLDPVAVAAID-VFGGGFLMRAVAQRQRL 84 
+                    45678999************876651044444567888777764.57888888999998876 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                         2664  (514374 residues searched)
+Passed MSV filter:                        64  (0.024024); expected 53.3 (0.02)
+Passed bias filter:                       44  (0.0165165); expected 53.3 (0.02)
+Passed Vit filter:                         4  (0.0015015); expected 2.7 (0.001)
+Passed Fwd filter:                         1  (0.000375375); expected 0.0 (1e-05)
+Initial search space (Z):               2664  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 13425.16
+//
+[ok]

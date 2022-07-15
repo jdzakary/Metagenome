@@ -1,0 +1,71 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_4.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b13261.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_4  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence     Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------     -----------
+      1e-16   57.1   0.0    1.4e-16   56.6   0.0    1.1  1  Sequence_228  
+     0.0001   17.7   0.0      0.013   10.8   0.0    2.6  2  Sequence_8    
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_228  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   56.6   0.0   2.3e-19   1.4e-16     107     269 ..     184     343 ..     169     364 .. 0.87
+
+  Alignments for each domain:
+  == domain 1  score: 56.6 bits;  conditional E-value: 2.3e-19
+   alignment_4 107 eriashGfvvitidtittldqpdsrarqlnaaldylindassavrsridssrlavmGhsmGGGGtlrlasqrpdlkaaipltp....whlnknwssv 199
+                    ++ashGfvv++ d  +       +++ql   ld++++  ++ + + id++++ ++Ghs GG   + +as+   lka +p++p    w   k+ +++
+  Sequence_228 184 SQLASHGFVVLAGDDSS-----TGKGDQLIEGLDWVMT-EPKEIETEIDTKKIGALGHSQGGASVVVVASHDKRLKAIVPIQPdcnfWVNCKSPEAI 274
+                   689********999655.....5899**********99.57889**************************************988889999****** PP
+
+   alignment_4 200 rvptliiGaeldtiapvsthakpfynslpssiskayleldgashfapnipnkiigkysvawlkrfvdndt 269
+                   + ptl++    d + p +t     y  l ++   a +e  + + +  + + k +g   +awl+ ++  d 
+  Sequence_228 275 TAPTLVLVGSSDVLVPAKTAKDKVYSKLTTTGMLATMEGADHTSWMREASSK-LGGPVLAWLRIHLMADG 343
+                   ******************************9999999877777777766665.56678999998776654 PP
+
+>> Sequence_8  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.8   0.0   2.1e-05     0.013      77     122 ..      11      59 ..       6     134 .. 0.80
+   2 !    4.3   0.0     0.002       1.2     193     260 ..     193     257 ..     174     261 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 10.8 bits;  conditional E-value: 2.1e-05
+  alignment_4  77 iyypr.en..ntyGavaispGytgtqasiawlGeriashGfvvitidti 122
+                  iyy   +n   +   v++  Gyt + +    l +++as+G+ v+ id  
+   Sequence_8  11 IYYHYsDNhdLSTPWVTLVNGYTRSSNDFRILTKKLASQGLRVLNIDNR 59 
+                  6665414422344569999***************************975 PP
+
+  == domain 2  score: 4.3 bits;  conditional E-value: 0.002
+  alignment_4 193 nknws.svrvptliiGaeldtiapvsthakpfynslpssiskayleldgashfapnipnkiigkysvaw 260
+                  +k+++ +v+ ptlii   +d i p s+  +++ n +    +   l ++g  h+    + k+i   sv +
+   Sequence_8 193 EKDYKpNVTSPTLIIHGTADRIVPFSQG-ESLANCIS---DSNLLRVEGGGHLLLAEAPKTIYDESVKF 257
+                  45554379****************9864.33444332...23456666666766666666666666655 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         1194  (329542 residues searched)
+Passed MSV filter:                        32  (0.0268007); expected 23.9 (0.02)
+Passed bias filter:                       24  (0.0201005); expected 23.9 (0.02)
+Passed Vit filter:                         6  (0.00502513); expected 1.2 (0.001)
+Passed Fwd filter:                         2  (0.00167504); expected 0.0 (1e-05)
+Initial search space (Z):               1194  [actual number of targets]
+Domain search space  (domZ):               2  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 9754.44
+//
+[ok]

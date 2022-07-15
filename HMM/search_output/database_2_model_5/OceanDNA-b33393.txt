@@ -1,0 +1,52 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b33393.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+  ------ inclusion threshold ------
+      0.031   11.5   0.2      0.083   10.1   0.2    2.0  1  Sequence_2785  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_2785  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 ?   10.1   0.2     2e-05     0.083      43     151 ..      44     160 ..       6     253 .. 0.79
+
+  Alignments for each domain:
+  == domain 1  score: 10.1 bits;  conditional E-value: 2e-05
+    alignment_5  43 yypretntygavaispgytateesiawlgeriasqgfvvitidtitrldq.pdsraeqlqaaldhlinrassvvrs........ridssrlavmgh 129
+                    y    ++ +ga+ +   + + +e i  + +r a+ gf  +  d            ae l++ ld     ++  +r         ++ s ++ v g+
+  Sequence_2785  44 YLAEAAEPFGALVVIQEWWGLNEQIRGVADRFAAAGFTTLVPDLYRGKRTvEAEEAEHLKSDLDFGDAATQD-IRGallhlkglKLGSGKVGVTGY 138
+                    4445558899999999999******************99998876544330344577777777665533333.2221111122278999******* PP
+
+    alignment_5 130 smggggalrlaaqrtdlkaaip 151
+                     mgg  +  +a   ++ +aa+ 
+  Sequence_2785 139 CMGGALTWLAAQASPEADAAVV 160
+                    ***9999999999999999985 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                         4205  (1140787 residues searched)
+Passed MSV filter:                        82  (0.0195006); expected 84.1 (0.02)
+Passed bias filter:                       49  (0.0116528); expected 84.1 (0.02)
+Passed Vit filter:                         7  (0.00166468); expected 4.2 (0.001)
+Passed Fwd filter:                         1  (0.000237812); expected 0.0 (1e-05)
+Initial search space (Z):               4205  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.03u 0.00s 00:00:00.03 Elapsed: 00:00:00.02
+# Mc/sec: 14887.27
+//
+[ok]

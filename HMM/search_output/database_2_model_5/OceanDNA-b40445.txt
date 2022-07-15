@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_5.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b40445.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_5  [M=261]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+     0.0081   12.1   0.1      0.018   10.9   0.1    1.6  2  Sequence_1103  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1103  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   10.9   0.1   1.1e-05     0.018      33     103 ..       3      72 ..       1     127 [. 0.80
+   2 ?   -1.9   0.0      0.09   1.5e+02     229     244 ..     220     239 ..     169     247 .. 0.68
+
+  Alignments for each domain:
+  == domain 1  score: 10.9 bits;  conditional E-value: 1.1e-05
+    alignment_5  33 sadgfgggtiyypretntygavaispgytateesiawlgeriasqgfvvitidtitrldqpdsraeqlqaa 103
+                    s+ g  gg +   ++ + +g va+  g  ++e si+ l       g++   +d++  +d   + aeql+a 
+  Sequence_1103   3 SSVGVNGGDVIEDKDVSRFGRVAVLMGGNSAERSISLLSGNAVLAGLLRAGVDAVG-IDVDSTLAEQLRAH 72 
+                    667999*********************************99999*********985.78888899999883 PP
+
+  == domain 2  score: -1.9 bits;  conditional E-value: 0.09
+    alignment_5 229 fvdddlry....eqflcpap 244
+                    f d d +y    +++ cpap
+  Sequence_1103 220 FYDFDAKYkandTRYTCPAP 239
+                    44444444222224558887 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (261 nodes)
+Target sequences:                         1633  (363815 residues searched)
+Passed MSV filter:                        36  (0.0220453); expected 32.7 (0.02)
+Passed bias filter:                       30  (0.0183711); expected 32.7 (0.02)
+Passed Vit filter:                         5  (0.00306185); expected 1.6 (0.001)
+Passed Fwd filter:                         1  (0.00061237); expected 0.0 (1e-05)
+Initial search space (Z):               1633  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.00s 00:00:00.01 Elapsed: 00:00:00.01
+# Mc/sec: 9495.57
+//
+[ok]

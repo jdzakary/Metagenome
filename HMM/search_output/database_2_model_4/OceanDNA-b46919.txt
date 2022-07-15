@@ -1,0 +1,53 @@
+# hmmsearch :: search profile(s) against a sequence database
+# HMMER 3.1b2 (February 2015); http://hmmer.org/
+# Copyright (C) 2015 Howard Hughes Medical Institute.
+# Freely distributed under the GNU General Public License (GPLv3).
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# query HMM file:                  models/model_4.hmm
+# target sequence database:        /home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2/OceanDNA-b46919.txt
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Query:       alignment_4  [M=296]
+Scores for complete sequences (score includes all domains):
+   --- full sequence ---   --- best 1 domain ---    -#dom-
+    E-value  score  bias    E-value  score  bias    exp  N  Sequence      Description
+    ------- ------ -----    ------- ------ -----   ---- --  --------      -----------
+     0.0012   14.5   0.1     0.0065   12.1   0.0    2.0  2  Sequence_1190  
+
+
+Domain annotation for each sequence (and alignments):
+>> Sequence_1190  
+   #    score  bias  c-Evalue  i-Evalue hmmfrom  hmm to    alifrom  ali to    envfrom  env to     acc
+ ---   ------ ----- --------- --------- ------- -------    ------- -------    ------- -------    ----
+   1 !   12.1   0.0   4.1e-06    0.0065     137     185 ..     205     254 ..     198     259 .. 0.86
+   2 ?   -0.8   0.0     0.035        56     136     173 ..     563     602 ..     508     620 .. 0.57
+
+  Alignments for each domain:
+  == domain 1  score: 12.1 bits;  conditional E-value: 4.1e-06
+    alignment_4 137 aaldylindassa.vrsridssrlavmGhsmGGGGtlrlasqrpdlkaai 185
+                     aldyl+++ +    + rid+s++ ++Ghs  G  +l  a+    +ka +
+  Sequence_1190 205 RALDYLLEKQDGDwKQVRIDPSKVGIIGHSRYGKQSLYAAAFDERIKAVV 254
+                    69****99877651567***********************9999999987 PP
+
+  == domain 2  score: -0.8 bits;  conditional E-value: 0.035
+    alignment_4 136 naaldylin...dassavrsridssrlavmGhsmGGGGtlr 173
+                     aa+ + ++   +a sa+  ++d++ +  +G+smG   ++ 
+  Sequence_1190 563 RAAVSFAVEgrgEARSAI-PKLDAKGVFLLGYSMGSMTAMY 602
+                    344444443111222222.3567777777777777666555 PP
+
+
+
+Internal pipeline statistics summary:
+-------------------------------------
+Query model(s):                              1  (296 nodes)
+Target sequences:                         1583  (333406 residues searched)
+Passed MSV filter:                        52  (0.032849); expected 31.7 (0.02)
+Passed bias filter:                       41  (0.0259002); expected 31.7 (0.02)
+Passed Vit filter:                         7  (0.00442198); expected 1.6 (0.001)
+Passed Fwd filter:                         1  (0.000631712); expected 0.0 (1e-05)
+Initial search space (Z):               1583  [actual number of targets]
+Domain search space  (domZ):               1  [number of targets reported over threshold]
+# CPU time: 0.01u 0.01s 00:00:00.02 Elapsed: 00:00:00.01
+# Mc/sec: 9868.82
+//
+[ok]
