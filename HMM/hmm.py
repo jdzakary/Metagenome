@@ -185,7 +185,18 @@ def full_run(
 
 
 def main():
-    full_run(6, 2, 10)
+    pd.set_option('display.width', None)
+    pd.set_option('display.max_columns', None)
+    data = pd.read_csv('results/summary/database_2_model_4.csv')
+    query = data[
+        (data['HMM-Length'] >= 100) & (data['HMM-Length'] <= 200)
+    ]
+    print(query)
+    sequence = find_sequence(
+        data_folder='/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2',
+        row=data.loc[322]
+    )
+    print(sequence)
 
 
 if __name__ == '__main__':
