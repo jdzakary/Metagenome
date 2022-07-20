@@ -79,12 +79,21 @@ def convert_database(
 
 
 def main():
-    convert_database(
-        '/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_1',
-        '/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_2',
-        100,
-        10
-    )
+    os.chdir('/home/iwe22/zakaryjd/Metagenome/GenomeFiles/')
+    file_count = 1
+    sequences = 0
+    data = []
+    with open('master_4.faa', 'r') as file:
+        while (line := file.readline()) != '':
+            data.append(line)
+            if line[0] == '>':
+                sequences += 1
+            elif sequences >= 2000:
+                with open(f'database_4/file_{file_count}.txt', 'w') as sub_file:
+                    sub_file.write(''.join(data))
+                data = []
+                sequences = 0
+                file_count += 1
 
 
 if __name__ == '__main__':
