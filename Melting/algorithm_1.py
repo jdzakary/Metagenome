@@ -1,5 +1,5 @@
 import pandas as pd
-import os
+from HMM.hmm import find_sequence
 
 
 def fetch_matrix() -> pd.DataFrame:
@@ -21,15 +21,34 @@ def score_sequence(sequence: str) -> float:
     for i in range(length - 1):
         x = sequence[i]
         y = sequence[i+1]
-        summation += float(matrix.at[x, y])
+        summation += matrix.at[x, y]
     return ((100 / length) * summation - 9372) / 398
 
 
+def scan_database(
+    database: int,
+    model: int,
+    filtered: bool
+) -> None:
+    data = pd.read_csv(
+        f'../HMM/results/summary/database_{database}_model_{model}'
+        f'{"_filtered" if filtered else ""}.csv'
+    )
+    scores = {}
+    for idx, values in data.iterrows():
+        sequence = find_sequence(
+            f'/home/iwe22/zakaryjd/Metagenome/GenomeFiles/database_{database}',
+            row=values
+        )
+        scores[
+            f'{values["File"]}_{values["SubFile"]}'
+        ] = score_sequence(sequence)
+    for file, score in scores.items():
+        print(f'{file:<25} {score:.4f}')
+
+
 def main():
-    for i in os.listdir('../HMM/results/sequences'):
-        with open(f'../HMM/results/sequences/{i}', 'r') as file:
-            fasta = file.read()
-        print(f'{i[:-4]:<25} {score_sequence(fasta):.4f}')
+    scan_database(2, 4, True)
 
 
 if __name__ == '__main__':
