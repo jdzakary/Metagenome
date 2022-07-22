@@ -3,10 +3,18 @@ from HMM.hmm import find_sequence
 
 
 def fetch_matrix() -> pd.DataFrame:
+    """
+    Fetch the weight matrix from file
+    :return:
+    """
     return pd.read_csv('matrix.csv', index_col=0)
 
 
 def show_matrix() -> None:
+    """
+    For visual inspection of the matrix
+    :return:
+    """
     pd.set_option('display.width', None)
     pd.set_option('display.max_columns', None)
     matrix = fetch_matrix()
@@ -15,6 +23,13 @@ def show_matrix() -> None:
 
 
 def score_sequence(sequence: str) -> float:
+    """
+    Score a protein sequence using the algorithm
+    :param sequence:
+        The protein sequence as a string
+    :return:
+        The score value
+    """
     matrix = fetch_matrix()
     length = len(sequence)
     summation = 0
@@ -30,6 +45,17 @@ def scan_database(
     model: int,
     filtered: bool
 ) -> None:
+    """
+    Scan the summary file (csv) of the HMM Search Results and apply the
+    algorithm to estimate their melting temperatures
+    :param database:
+        The database id
+    :param model:
+        The model id
+    :param filtered:
+        Use the filtered csv file?
+    :return:
+    """
     data = pd.read_csv(
         f'../HMM/results/summary/database_{database}_model_{model}'
         f'{"_filtered" if filtered else ""}.csv'

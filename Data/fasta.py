@@ -1,5 +1,4 @@
 import time
-import json
 from tqdm import tqdm
 from typing import Callable, Iterable
 from Bio import Entrez, SeqIO
@@ -22,6 +21,15 @@ def fetch_sequence(
     code: str,
     db: str = 'protein'
 ) -> SeqRecord:
+    """
+    Fetch sequence data from a variety of NCBI Databases
+    :param code:
+        The identifier to be fetched
+    :param db:
+        The NCBI database to search
+    :return:
+        A BioPython sequence record object that contains the queried sequence
+    """
     handle = Entrez.efetch(db=db, rettype='fasta', id=code)
     sequence: SeqRecord = SeqIO.read(handle, format='fasta')
     return sequence
@@ -31,6 +39,14 @@ def save_fasta(
     sequences: list[SeqRecord],
     save_path: str
 ) -> None:
+    """
+    Save a list of SeqRecord objects to a single fasta file on disk
+    :param sequences:
+        A list of the sequence objects to be saved
+    :param save_path:
+        The path of the fasta file
+    :return:
+    """
     with open(save_path, 'w') as file:
         SeqIO.write(sequences, file, 'fasta')
 
@@ -41,6 +57,19 @@ def mega_fasta(
     db: str = 'protein',
     pbar: bool = False
 ) -> None:
+    """
+    Query a group of sequences from NCBI databases and save them to a single
+    fasta file
+    :param codes:
+        A list of the codes to query NCBI for
+    :param save_path:
+        The path of the output file
+    :param db:
+        Which NCBI database you would like to query
+    :param pbar:
+        If you would like to have a progress bar displayed in the terminal
+    :return:
+    """
     sequences = []
     for i in (tqdm(codes) if pbar else codes):
         sequences.append(fetch_sequence(i, db))

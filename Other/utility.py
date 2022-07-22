@@ -9,18 +9,34 @@ from subprocess import Popen, PIPE
 
 
 class JobMachine:
-
+    """
+    Reliably track the completion of tasks in a multiprocessing pool
+    with a shared counter object that is shown in the terminal using a progress
+    bar. Does not store the results of the tasks - assumes that the worker
+    function does not return anything useful.
+    """
     class JobCounter:
+        """
+        The shared counter
+        """
         def __init__(self):
             self.counter = mp.RawValue('i', 0)
             self.lock = mp.Lock()
 
         def increment(self):
+            """
+            Increase the counter by 1
+            :return:
+            """
             with self.lock:
                 self.counter.value += 1
 
         @property
         def value(self) -> int:
+            """
+            The number of jobs that have been completed
+            :return:
+            """
             return self.counter.value
 
     def __init__(
@@ -40,10 +56,18 @@ class JobMachine:
         )
 
     def init_pool(self):
+        """
+        Used to initialize each separate process
+        :return:
+        """
         global JOB_COUNTER
         JOB_COUNTER = self.job_counter
 
     def start(self):
+        """
+        Start the multiprocessing
+        :return:
+        """
         self.pool.map_async(
             partial(self.worker, self.worker_func),
             self.args_list
@@ -58,17 +82,34 @@ class JobMachine:
 
     @staticmethod
     def worker(task: Callable, value: Any):
+        """
+        Call the provided worker_func and increment the counter when it is done
+        :param task:
+        :param value:
+        :return:
+        """
         task(value)
         JOB_COUNTER.increment()
 
     @property
     def value(self) -> int:
+        """
+        The number of jobs that have been completed
+        :return:
+        """
         return self.job_counter.value
 
 
 def simple_run(
     command: Union[list[str], str]
 ) -> str:
+    """
+    A Python wrapper to execute commands in the terminal and store std::out
+    :param command:
+        The command to execute
+    :return:
+        Any output to the console
+    """
     process = Popen(command, shell=True, stdout=PIPE)
     output = list()
     while True:
@@ -79,6 +120,12 @@ def simple_run(
 
 
 def my_worker(value):
+    """
+    Test worker for demonstration purposes
+    :param value:
+        The amount of time to sleep
+    :return:
+    """
     time.sleep(value)
 
 
