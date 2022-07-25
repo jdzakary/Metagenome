@@ -130,6 +130,13 @@ def my_worker(value):
 
 
 def main() -> None:
+    """
+    np.random.random(100) generates 100 datapoints with an average of ~0.5,
+    giving a total value of ~50. Sleeping these values with a single process
+    would therefore take 50 seconds, however the job machine is able to
+    accomplish this in ~10 seconds due to the 5 processes used.
+    :return:
+    """
     machine = JobMachine(
         processes=5,
         worker_func=my_worker,
